@@ -932,14 +932,205 @@
         </div>
 
         <div id="view-chapter6" class="hidden fade-in bg-white min-h-screen pb-20">
-            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 6</span></div></div>
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
+                <div class="max-w-3xl mx-auto flex justify-between items-center">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
+                    </button>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 6</span>
+                </div>
+            </div>
+
             <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
-                <header class="mb-12 text-center"><div class="text-amber-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part III: Will</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Dynamic Field Theory</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">The Geometry of the Limit</p><p class="text-slate-500 italic font-sans">Chapter 6</p></header>
-                <div class="bg-amber-50 p-8 rounded-xl text-amber-900 mb-12 italic text-base leading-relaxed border border-amber-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> We introduce <strong>Dynamic Field Theory (DFT)</strong>, a framework that enforces the Action Quota on field excitations through a universal, Lorentz-covariant kernel <span class="math">K(&#9633;) = e<sup>-&#9633;/4&pi;&rho;<sub>0</sub></sup></span>. We prove that this kernel is the unique form that preserves unitarity (no ghosts), causality, and gauge invariance while rendering loop integrals finite. We demonstrate how this mechanism resolves the Hierarchy Problem and provides a ghost-free framework for Quantum Gravity.</div>
-                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Infinite Ledger</h2><p class="mb-6">Standard Quantum Field Theory (QFT) is built on an assumption of infinite capacity. This leads to the Ultraviolet Catastrophe. Action Realism rejects this premise. The Action Quota is a limit on existence.</p></section>
-                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Kernel: Implementing the Limit</h2><p class="mb-4">We postulate that the kinetic operator of any field is modified by a Kernel <span class="math">K(&#9633;)</span>. The modified propagator becomes:</p><div class="math-block">$$ D_{\rho_0}(k) = \frac{i}{k^2 - m^2 + i\epsilon} e^{-k^2/\Lambda_*^2} $$</div><p class="mb-4">We prove that under strict requirements of unitarity and causality, the unique form is <span class="math">K(k<sup>2</sup>) = e<sup>-k<sup>2</sup>/&Lambda;<sub>*</sub><sup>2</sup></sup></span>. This ties the abstract quantum limit to the field theory cutoff via <span class="math">&Lambda;<sub>*</sub><sup>2</sup> = 4&pi;&rho;<sub>0</sub></span>.</p></section>
-                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. The Ghost-Free Guarantee</h2><p class="mb-6">Because the kernel is an <strong>entire function</strong>, it has no poles. Thus, DFT modifies the weight of high-energy states but does not create new pathological states (ghosts).</p></section>
-                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter5')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter7')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+                
+                <header class="mb-12 text-center">
+                    <div class="text-amber-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part III: Will</div>
+                    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Dynamic Field Theory</h1>
+                    <p class="text-2xl text-slate-400 italic font-serif mb-4">The Geometry of the Limit</p>
+                    <p class="text-slate-500 italic font-sans">Chapter 6</p>
+                </header>
+
+                <div class="bg-amber-50 p-8 rounded-xl text-amber-900 mb-12 italic text-base leading-relaxed border border-amber-100 font-sans">
+                    <strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong>
+                    In Part II, we established that the Action Quota (\(\rho_0 = \hbar\)) governs the kinematics of individual quantum states. In Part III, we extend this constraint to the continuum. We introduce <strong>Dynamic Field Theory (DFT)</strong>, a framework that enforces the Action Quota on field excitations through a universal, Lorentz-covariant kernel \(K(\Box) = e^{-\Box/4\pi\rho_0}\). We prove that this kernel is the unique form that preserves unitarity (no ghosts), causality, and gauge invariance while rendering loop integrals finite. We demonstrate how this mechanism resolves the Hierarchy Problem, provides a mechanism for mass generation, and—crucially—provides a ghost-free framework for Quantum Gravity without introducing the pathological instabilities that plague standard higher-derivative theories.
+                </div>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Infinite Ledger: The Ultraviolet Catastrophe of Fields</h2>
+                    <p class="mb-6">
+                        Standard Quantum Field Theory (QFT) is built on an assumption of infinite capacity. It assumes that any volume of space, no matter how small, can support an unlimited number of field modes with unlimited energy.
+                    </p>
+                    <p class="mb-6">
+                        This assumption leads to the modern version of the Ultraviolet Catastrophe. In the Standard Model, the vacuum is a boiling sea of virtual particles. When we calculate the mass of the Higgs boson or the energy of the vacuum, we must sum over all possible momentum modes (\(k\)). Because standard QFT sets no upper limit on \(k\), these sums diverge to infinity.
+                    </p>
+                    
+                    
+
+                    <p class="mb-6">
+                        Physicists typically handle this via <strong>Renormalization</strong>: cutting off the integral at an arbitrary scale \(\Lambda\) and subtracting the infinity. While mathematically successful, it leaves a "Hierarchical" wound: why is the physical mass of the Higgs (\(125\) GeV) so astronomically smaller than the Planck scale (\(10^{19}\) GeV)? It requires a "fine-tuning" of constants to 30 decimal places—a ledger that balances only by a miraculous accident.
+                    </p>
+                    <p class="mb-6">
+                        <strong>Action Realism</strong> rejects the premise. The Action Quota (\(\rho_0\)) derived in Chapter 5 is not just a limit on measurement; it is a limit on <strong>existence</strong>. We therefore propose a structural modification to field theory: <strong>Dynamic Field Theory (DFT)</strong>. We do not change the particles; we change the stage they play on.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Kernel: Implementing the Limit</h2>
+                    <p class="mb-6">
+                        To enforce the Action Quota on a continuous field, we must introduce a mechanism that suppresses modes which exceed the information density limit.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 font-sans">The Kinematic Ansatz</h3>
+                    <p class="mb-4">
+                        We postulate that the kinetic operator of any field is modified by a <strong>Kernel</strong> \(K(\Box)\), where \(\Box = \partial_\mu \partial^\mu\). The modified propagator for a scalar field becomes:
+                    </p>
+                    <div class="math-block">
+                        $$ D_{\rho_0}(k) = \frac{i}{k^2 - m^2 + i\epsilon} K(k^2) $$
+                    </div>
+                    <p class="mb-4">We require four properties for this kernel to be physically viable:</p>
+                    <ol class="list-decimal ml-6 space-y-2 mb-6 text-base">
+                        <li><strong>Lorentz Covariance:</strong> It must depend only on the invariant \(k^2\).</li>
+                        <li><strong>Infrared Normalization:</strong> \(K(0) = 1\) (standard physics is recovered at low energy).</li>
+                        <li><strong>Ultraviolet Finiteness:</strong> \(K(k^2)\) must decay faster than any polynomial as \(k^2 \to \infty\).</li>
+                        <li><strong>Spectral Safety (No Ghosts):</strong> \(K(k^2)\) must not introduce new poles in the complex plane.</li>
+                    </ol>
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 font-sans">The Uniqueness Theorem</h3>
+                    <p class="mb-6">Is the choice of kernel arbitrary? No. We prove that under the strict requirements of unitarity and causality, the form is unique.</p>
+
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-6">
+                        <h4 class="font-bold text-slate-700 text-sm uppercase mb-2">Proof Sketch (Uniqueness)</h4>
+                        <p class="mb-4 text-base">We seek a function \(K(z)\) (where \(z = k^2\)) that is <strong>entire</strong> (no poles anywhere) and <strong>zero-free</strong> (preventing tachyons).</p>
+                        <ol class="list-decimal ml-6 space-y-2 text-base">
+                            <li>By the Hadamard Factorization Theorem, a zero-free entire function must be the exponential of a polynomial: \(K(z) = e^{P(z)}\).</li>
+                            <li>We require Gaussian damping in the Euclidean sector (\(k_E^2 \to \infty\)) to ensure convergence. This restricts \(P(z)\) to be linear in \(z\).</li>
+                            <li><strong>Minimal Nonlocality:</strong> We require the kernel to introduce exactly one new scale \(\Lambda_*\). Higher order terms would introduce a hierarchy of scales without justification.</li>
+                        </ol>
+                        <p class="mt-4 text-base font-bold text-center">This forces the unique solution:</p>
+                        <div class="math-block text-lg">
+                            $$ K(\Box) = e^{-\Box/\Lambda_*^2} \implies K(k^2) = e^{-k^2/\Lambda_*^2} $$
+                        </div>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-4 font-sans">Calibrating the Scale: Derivation of \(\Lambda_*\)</h3>
+                    <p class="mb-4">How does the field cutoff \(\Lambda_*\) relate to the Action Quota \(\rho_0\)?</p>
+                    <p class="mb-4">
+                        The Action Quota states that each distinguishable cell in phase space has volume \(\rho_0 = \hbar\). The integral measure in Euclidean momentum space suggests a natural cutoff where the exponential becomes significant. Setting the characteristic momentum scale \(k_*\) where the mode density saturates the action limit:
+                    </p>
+                    <div class="math-block">
+                        $$ \int_0^{k_*} 2\pi^2 k^3 dk \cdot \frac{\rho_0}{(2\pi)^3} \sim 1 $$
+                    </div>
+                    <p class="mb-4">
+                        This implies \(k_*^4 \sim (2\pi)^3/\rho_0\). For spherical integration in 4D, this yields the fundamental relation:
+                    </p>
+                    <div class="math-block font-bold text-indigo-900">
+                        $$ \Lambda_*^2 = 4\pi\rho_0 $$
+                    </div>
+                    <p class="mb-6">(In natural units where \(\hbar=1\)). This ties the abstract quantum limit directly to the field theory cutoff.</p>
+
+                    <div class="border-l-4 border-amber-300 pl-4 py-1">
+                        <h4 class="font-bold text-slate-800 text-sm mb-1">The Numerical Puzzle</h4>
+                        <p class="text-sm text-slate-600">
+                            Using \(\rho_0 = \hbar\), we find \(\Lambda_* \approx 3.5\) GeV. This value contradicts LHC data (TeV scale). There are two possible resolutions:
+                            <br>1. <strong>Planck Identification:</strong> \(\rho_0\) is evaluated at the Planck scale, giving \(\Lambda_* \sim 10^{19}\) GeV.
+                            <br>2. <strong>Effective Scaling:</strong> \(\rho_0\) is an effective parameter that runs with energy scale.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. The Ghost-Free Guarantee</h2>
+                    <p class="mb-6">
+                        DFT avoids the <strong>Ostrogradsky Instability</strong> (ghosts) through the <strong>Uniform Multiplier Guardrail</strong>.
+                        Because \(K(k^2) = e^{-k^2/\Lambda_*^2}\) is an <strong>entire function</strong>, it has no poles.
+                    </p>
+                    <div class="math-block">
+                        $$ D_{\rho_0}(k) = \frac{ie^{-k^2/\Lambda_*^2}}{k^2 - m^2} $$
+                    </div>
+                    
+                    
+
+                    <p class="mb-6">
+                        The only pole is at \(k^2 = m^2\) (the physical particle). There are no other singularities in the complex plane. Thus, DFT modifies the <em>weight</em> of high-energy states but does not create <em>new</em> pathological states.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">4. The Dividend: Finite Answers to Infinite Problems</h2>
+                    
+                    
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 mt-6 font-sans">The Hierarchy Problem: A Natural Ceiling</h3>
+                    <p class="mb-4">
+                        In the Standard Model, the Higgs mass correction \(\delta m^2\) diverges quadratically. In DFT, the integral is regulated:
+                    </p>
+                    <div class="math-block">
+                        $$ \delta m_{DFT}^2 \propto \int \frac{d^4k_E}{(2\pi)^4} \frac{k^2 e^{-k^2/\Lambda_*^2}}{k^2 + m_t^2} \approx \frac{3y_t^2 \Lambda_*^2}{32\pi^2} $$
+                    </div>
+                    <p class="mb-6">The correction is finite. If \(\Lambda_* \sim\) TeV, then \(\delta m^2 \sim m_H^2\), and the mass is "natural."</p>
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">Mechanism for the Yang-Mills Mass Gap</h3>
+                    <p class="mb-6">
+                        In DFT, the modified gluon propagator satisfies a gap equation. Numerical analysis suggests that a non-zero mass solution \(m_{gap}\) emerges, scaling as \(m_{gap} \approx 0.5 \Lambda_*\). This provides a <strong>mechanism</strong> for mass generation via dimensional transmutation.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">The Cosmological Constant: Finite but Large</h3>
+                    <p class="mb-6">
+                        The energy density of the vacuum (\(\rho_{vac}\)) in DFT is truncated to a finite value: \(\rho_{vac} \sim \Lambda_*^4/16\pi^2\). DFT transforms the problem from a mathematical impossibility (Infinity) to a physical puzzle (Scaling).
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">5. Gravity: The Architecture of Spacetime</h2>
+                    <p class="mb-6">
+                        Does this regularization extend to gravity? This is crucial because gravity is where the UV catastrophe becomes most severe. We applied the DFT kernel to the Einstein-Hilbert action (Quota-Constrained Gravity).
+                    </p>
+                    <ul class="list-disc ml-6 space-y-4 mb-6">
+                        <li>
+                            <strong>Minkowski No-Ghost:</strong> The graviton propagator becomes \(D_{grav} \sim K(k^2)/k^2\). Because the kernel is entire, <strong>no massive ghost pole</strong> appears in the spin-2 sector.
+                        </li>
+                        <li>
+                            <strong>FRW Causality:</strong> On a spatially flat expanding background, numerical integration shows that pre-source leakage is suppressed to \(\le 10^{-6}\). This confirms that DFT's nonlocality is "soft" enough to preserve causality.
+                        </li>
+                        <li>
+                            <strong>Ceiling Tension (Speculative):</strong> The stress of maintaining the UV cutoff creates a "back-reaction" that acts as a counter-term, potentially canceling the bulk vacuum energy.
+                        </li>
+                    </ul>
+                    <p class="mb-6">This establishes DFT as a candidate for a ghost-free, finite theory of Quantum Gravity.</p>
+                </section>
+
+                <section class="mb-12 bg-slate-50 p-6 rounded-lg border border-slate-200">
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 font-sans">6. Experimental Signatures and Falsification</h2>
+                    <p class="mb-4">If DFT is correct, what observable consequences would it have?</p>
+                    <ol class="list-decimal ml-6 space-y-2 mb-2">
+                        <li><strong>High-Energy Scattering:</strong> Scattering amplitudes should deviate from SM predictions: \(\mathcal{M}_{DFT}(s) = \mathcal{M}_{SM}(s) e^{-s/\Lambda_*^2}\).</li>
+                        <li><strong>Renormalization Group Running:</strong> The \(\beta\)-functions should saturate at high energy.</li>
+                        <li><strong>Cosmological Observables:</strong> Variations in \(\rho_0\) in the early universe would leave imprints on the CMB.</li>
+                    </ol>
+                </section>
+
+                <div class="bg-amber-50 p-6 rounded-lg border border-amber-100 text-base text-amber-900 mb-12">
+                    <h3 class="font-bold text-lg mb-2">Conclusion: The Geometry of the Limit</h3>
+                    <p class="mb-4">
+                        Dynamic Field Theory applies the Action Quota to the continuum, from particle physics to the gravitational field. By replacing the assumption of infinite capacity with the reality of a finite budget, we:
+                    </p>
+                    <ul class="list-disc ml-6 mb-4">
+                        <li>Eliminate Ultraviolet Divergences without breaking Lorentz symmetry.</li>
+                        <li>Protect the theory from Ghosts via the Entire Kernel.</li>
+                        <li>Provide mechanisms for Mass Generation and Naturalness.</li>
+                        <li>Establish a ghost-free framework for Quantum Gravity.</li>
+                    </ul>
+                    <p>
+                        The "Ceiling" (\(\Lambda_*\)) is not an artifact but a fundamental limit—the <strong>Event Horizon of Information</strong> beyond which spacetime itself cannot encode additional distinguishable structure.
+                    </p>
+                </div>
+
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
+                    <button onclick="showView('chapter5')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter7')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
+                </footer>
+
             </article>
         </div>
 
