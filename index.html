@@ -3,95 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action Realism | Syntax, Semantics and Will</title>
+    <title>Action Realism: What is the price of being distinct?</title>
     
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* Minimalist Academic Styling */
-        body {
-            font-family: "Georgia", "Times New Roman", serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fdfdfd;
-        }
-        h1 {
-            font-weight: normal;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        h2 {
-            font-size: 1.2rem;
-            color: #555;
-            margin-top: 40px;
-        }
-        .status-box {
-            border: 1px solid #ccc;
-            background-color: #eee;
-            padding: 15px;
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 40px;
-        }
-        .abstract {
-            font-style: italic;
-            margin: 20px 0;
-            padding-left: 20px;
-            border-left: 3px solid #ccc;
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Merriweather', serif; }
+        .btn-transition { transition: all 0.3s ease; }
+        .bg-paper { background-color: #fdfbf7; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Math Styling */
+        .math { font-family: 'Times New Roman', Times, serif; font-style: italic; }
+        .math-block { 
+            font-family: 'Times New Roman', Times, serif; 
+            text-align: center; 
+            padding: 1rem; 
+            background: #f8fafc; 
+            border-radius: 0.5rem; 
+            margin: 1.5rem 0; 
+            font-size: 1.1em; 
+            color: #1e293b; 
+            border: 1px solid #e2e8f0; 
         }
     </style>
 </head>
-<body>
+<body class="bg-paper text-slate-800 flex flex-col min-h-screen">
 
-    <header>
-        <h1>Action Realism</h1>
-        <p><strong>Subtitle:</strong> Syntax, Semantics and Will</p>
-    </header>
-
-    <div class="status-box">
-        <p>Site Under Construction. Full papers and manuscript forthcoming.</p>
-    </div>
-
-    <main>
-        
-        <section id="introduction">
-            <h2>Abstract / Preface</h2>
-            <div class="abstract">
-                <p>
-                    [This is where your introduction will go. You can explain the core tenet of Action Realism here. 
-                    For now, this is just a placeholder to show the layout.]
-                </p>
+    <nav class="w-full bg-white/90 backdrop-blur-md shadow-sm px-6 py-4 sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl text-slate-900 tracking-tight cursor-pointer" onclick="showView('home')">Action Realism</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
+                <a href="#" onclick="showView('home'); document.getElementById('origin').scrollIntoView();" class="hover:text-indigo-600 transition-colors">The Origin</a>
+                <a href="#" onclick="showView('home'); document.getElementById('structure').scrollIntoView();" class="hover:text-indigo-600 transition-colors">Structure</a>
+                <a href="#" onclick="showView('home'); document.getElementById('collaborate').scrollIntoView();" class="hover:text-indigo-600 transition-colors">Collaborate</a>
             </div>
-            <p>
-                The universe is not merely a collection of objects, but a syntax of events. 
-                (You can edit this text in the file later).
-            </p>
-        </section>
+            <button class="md:hidden text-slate-500 hover:text-indigo-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </nav>
 
-        <section id="technical-preview">
-            <h2>Technical Preview: The Action Quota</h2>
-            <p>
-                This site supports LaTeX rendering. Below is a sample equation to test the display:
-            </p>
-            
-            $$ S = \int_{t_1}^{t_2} L(q, \dot{q}, t) \, dt $$
-            
-            <p>
-                Future sections will reconstruct qubit mechanics and the periodic table from this geometric first principle.
-            </p>
-        </section>
+    <main class="flex-grow">
+        
+        <div id="view-home" class="fade-in">
+            <section class="py-24 px-6 text-center border-b border-slate-200 bg-white">
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-2">Action <span class="text-indigo-700">Realism</span></h1>
+                    <p class="text-xl md:text-2xl text-slate-600 font-light tracking-wide uppercase">Semantics, Syntax, and Will</p>
+                    <p class="text-2xl md:text-3xl text-slate-500 font-light italic font-serif pt-4">"What is the price of being distinct?"</p>
+                    <p class="text-lg font-medium text-slate-800 pt-2 tracking-wide uppercase text-xs">By Emiliano Shea</p>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-6">Reality is not a given; it is a transaction. <br>We are not passive observers, but active participants paying a thermodynamic price to carve meaning out of the noise.</p>
+                    <div class="pt-8"><a href="#origin" class="btn-transition inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Read the Preface</a></div>
+                </div>
+            </section>
+
+            <section id="origin" class="py-20 px-6 bg-paper">
+                <div class="max-w-3xl mx-auto">
+                    <div class="space-y-8">
+                        <h2 class="text-3xl font-bold text-slate-900 border-l-4 border-indigo-600 pl-4">The Condition for Discovery</h2>
+                        <div class="prose prose-lg text-slate-700 leading-relaxed space-y-6 text-justify font-serif">
+                            <p>This project was born from a single question asked in a small room in Mexico City, lined with my father's books. In the raw immediacy of loss, I realized that a life is not a static object. It is a physical record of a struggle against entropy.</p>
+                            <p>I am not a physicist by training; my background is in mathematics and economics. But I never lost the economist’s eye for hidden costs. When I turned my attention to physics, I saw the Standard Model not as a revelation, but as a confirmation of an old grudge. Just as economics often ignores the unpaid labor that sustains a market, physics seemed to ignore the unseen costs that sustain a particle.</p>
+                            <p class="bg-indigo-50 p-6 rounded-lg border border-indigo-100 italic text-indigo-900">"I realized that for a particle to exist—to maintain the sharp edge of its identity against the blur of entropy—it must pay a continuous tax. I call this the <strong>Action Quota</strong>."</p>
+                            <p>Planck’s solution to the ultraviolet catastrophe was not just a quantization of energy; it was the introduction of a <strong>shadow price</strong>. A market correction applied to the universe.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="structure" class="py-20 px-6 bg-white border-t border-slate-200">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold text-slate-900">Reconstructing Reality</h2>
+                        <p class="text-slate-500 mt-3 max-w-2xl mx-auto">In the pages that follow, we reconstruct reality from the ground up across three domains.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="group relative bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
+                            <div class="p-8 flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Part I</h3>
+                                <h4 class="text-lg font-medium text-indigo-700 mb-4">Semantics</h4>
+                                <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Defining the conflict between the infinite potential of the <strong>Dreamer</strong> and the finite <strong>Pilot</strong>.</p>
+                                <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter1')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 1</button><button onclick="showView('chapter2')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 2</button></div></div>
+                                    <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part1-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group relative bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
+                            <div class="p-8 flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Part II</h3>
+                                <h4 class="text-lg font-medium text-emerald-700 mb-4">Syntax</h4>
+                                <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Deriving the laws of quantum mechanics from the cost of existence.</p>
+                                <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter3')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 3</button><button onclick="showView('chapter4')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 4</button><button onclick="showView('chapter5')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 5</button></div></div>
+                                    <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part2-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group relative bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-amber-500"></div>
+                            <div class="p-8 flex flex-col h-full">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Part III</h3>
+                                <h4 class="text-lg font-medium text-amber-700 mb-4">Will</h4>
+                                <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Extending to the continuum and the emergence of agency.</p>
+                                <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter6')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 6</button><button onclick="showView('chapter7')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 7</button><button onclick="showView('chapter8')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 8</button></div></div>
+                                    <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part3-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="collaborate" class="py-20 px-6 bg-slate-900 text-white text-center">
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold">From Solitude to Collaboration</h2>
+                    <div class="text-slate-300 text-lg leading-relaxed space-y-4">
+                        <p>This project has been a study in solitude. I used Artificial Intelligence not to replace thought, but to simulate the vigorous peer review I could not access.</p>
+                        <p>Now, I open that door. I am seeking the "unmeasurable pressure" of scrutiny. Tell me where I am wrong. Help me calculate the hidden costs I might have missed. I want this to be an active collaboration to improve an ongoing project that is always open-ended and constantly evolving.</p>
+                    </div>
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-left space-y-4 mt-8">
+                        <label class="block text-sm font-medium text-slate-300">Share your critique or insight</label>
+                        <textarea class="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent h-32" placeholder="Reference a specific Part, equation, or concept..."></textarea>
+                        <div class="flex justify-end"><button onclick="alert('In a real version, this would submit your contribution to the public discussion board.')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2 px-6 rounded-lg transition-colors">Submit Contribution</button></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-part1-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part I: Research Library</span></div></div>
+            <div class="max-w-5xl mx-auto px-6 mt-16">
+                <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">Semantics: The Unmeasurable Pressure</h1></header>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('part1-essays-toc')">
+                        <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Foundational Essays</h2><p class="text-slate-600 mb-6 leading-relaxed">The philosophical and ontological bedrock of Action Realism.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>4 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer" onclick="showView('gql2-toc')">
+                        <div class="h-2 bg-amber-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-amber-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Incompleteness</h2><p class="text-slate-600 mb-6 leading-relaxed">Operational incompleteness and the existence of an unmeasurable sector.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>1 Paper</span></div></div>
+                    </div>
+                    <div class="group bg-slate-50 rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all cursor-pointer" onclick="showView('historical-toc')">
+                        <div class="h-2 bg-slate-400 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-200 px-2 py-1 rounded">Series 0</span><i data-lucide="archive" class="w-5 h-5 text-slate-400 group-hover:text-slate-600 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-700 mb-3">Historical Archive</h2><p class="text-slate-500 mb-4 leading-relaxed">Early manuscripts and code that laid the groundwork for Action Realism.</p><div class="flex items-center text-sm text-slate-400 border-t border-slate-200 pt-4"><i data-lucide="history" class="w-4 h-4 mr-2"></i><span>2 Legacy Papers</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-part2-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II: Research Library</span></div></div>
+            <div class="max-w-5xl mx-auto px-6 mt-16">
+                <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Action Quota Library</h1></header>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('reconstruction-toc')">
+                        <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">The Reconstruction Archive</h2><p class="text-slate-600 mb-6 leading-relaxed">The formal eight-lemma derivation of quantum mechanics from the single axiom of variance complementarity.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>8 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('fold-kinematics-toc')">
+                        <div class="h-2 bg-emerald-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Fold Kinematics & GR</h2><p class="text-slate-600 mb-6 leading-relaxed">Applied analysis of the Action Quota in gravitational lensing and caustic formation.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-part3-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part III: Research Library</span></div></div>
+            <div class="max-w-5xl mx-auto px-6 mt-16">
+                <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Will: Architecture of the Fold</h1></header>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('dft-toc')">
+                        <div class="h-2 bg-blue-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Dynamic Field Theory</h2><p class="text-slate-600 mb-6 leading-relaxed">The continuum substrate. A symmetry-respecting field theory where finite information is enforced by a single, Lorentz-covariant, entire kernel.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>2 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('dst-toc')">
+                        <div class="h-2 bg-amber-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-amber-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Dynamic Self-Topology</h2><p class="text-slate-600 mb-6 leading-relaxed">The emergence of agency. Deriving the Action Channel (<span class="math">M</span>) from the Maximum Entropy Principle.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="view-chapter1" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part I &bull; Chapter 1</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-indigo-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">The Dreamer, The Pilot, and the Inevitable Edge</h1><p class="text-slate-500 italic font-sans">Chapter 1</p></header>
+                <div class="bg-indigo-50 p-8 rounded-xl text-indigo-900 mb-12 italic text-base leading-relaxed border border-indigo-100 font-sans">
+                    <strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong>
+                    We begin with the fundamental paradox of existence: the tension between infinite potential and finite structure. This chapter argues that physical reality is the mandatory resolution of this tension—a transaction between unmeasurable potential (<strong>Semantics</strong>) and measurable structure (<strong>Syntax</strong>). We introduce <strong>Action Realism</strong>, a monistic framework where the flow of physical action (<span class="math">S</span>) is primary. We propose that the quantization of action is not an arbitrary fact of nature, but a thermodynamic necessity: the <strong>Action Quota</strong> (<span class="math">&rho;<sub>0</sub> &asymp; &#8463;/2</span>), representing the minimum action required to maintain a distinct bit of information against quantum indeterminacy.
+                </div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Visceral Paradox: Against the Blur</h2><p class="mb-6">Hold your hand up to the light. The line where your finger ends and the air begins appears absolute. That sharp edge—the feeling of being a distinct, localized <strong>Self</strong>—is the most basic fact of our existence. But to the physicist, that boundary is a fragile miracle.</p><p class="mb-6">The natural state of the universe is not sharpness, but a blur. Entropy drives systems toward thermal equilibrium—a featureless distribution where distinctions dissolve. In the language of statistical mechanics, sharply defined structures like your hand occupy an astronomically small fraction of configuration space. Hence, existence itself is a struggle against the indeterminate.</p><p class="mb-6">The constructed nature of this boundary is tragically revealed when it fails. Neurologists have documented patients like Yolanda—cases based on parietal-lobe damage—who lose track of where their bodies end. Reaching for a coffee cup, Yolanda could not tell where her hand ended and the ceramic began. <span class="text-indigo-800">"I am the cup,"</span> she reported, frightened.</p><p>Yolanda's struggle is a neurological parable for physical reality. We are all, every moment, rebuilding the boundary of the self against a background of disorder. But what resource sustains this boundary?</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Dual Skies: Metaphor and Mechanism</h2><p class="mb-6">We anchor our inquiry with a metaphor that maps directly to the formalism of quantum mechanics: the relationship between a <strong>Dreamer</strong> and a <strong>Pilot</strong>.</p><ul class="list-none space-y-4 mb-8 pl-4 border-l-2 border-slate-200"><li><strong>The Dreamer (Semantics):</strong> The potential self. This corresponds to the <strong>Quantum Superposition</strong>—the infinite-dimensional Hilbert space containing all possible states. Like a dreamer, it is unbounded and unconstrained.</li><li><strong>The Pilot (Syntax):</strong> The actual self. This corresponds to the <strong>Classical Outcome</strong>—the finite-dimensional measurement record. Like a pilot, it relies on specific coordinates and instruments to navigate a definite trajectory.</li></ul><p class="mb-8">Standard physics often treats these as two different worlds (the Quantum and the Classical) separated by a mysterious "cut." <strong>Action Realism</strong> proposes that they are two sides of a continuous economic transaction.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. The Transaction: Semantics Meets Syntax</h2><p class="mb-6">This framework is a <strong>Monism of Action</strong>. We posit that physical action—in the precise sense of the quantity <span class="math">S = &int; L dt</span>—is the fundamental substrate. Matter, energy, and information are derivative; they are patterns of action flow.</p><h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">Semantics: The Unmeasurable Pressure</h3><p class="mb-4">Semantics is the sector of <strong>unmeasurable potential</strong>. We do not use "unmeasurable" to mean "mystical," but in the strict quantum sense of <strong>Indeterminacy</strong>.</p><ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-indigo-400"><li>Before a photon hits a screen, it exists as a <strong>wave function</strong>—an amplitude of potential states. It has no definite position. It is "semantic"—pure potential.</li><li>It is unmeasurable in principle because any measurement converts it into Syntax. You cannot see the wave; you can only see where it crashed.</li></ul><h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">Syntax: The Finite Code</h3><p class="mb-4">Syntax is the sector of <strong>finite structure</strong>. It is the ledger of what has actually happened—the collapsed eigenstate, the recorded measurement. It is defined by:</p><ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-indigo-400"><li><strong>Temporal Evolution:</strong> The history of the system, including both the unitary flow of quantum states and the irreversible accumulation of measurement records.</li><li><strong>Structural Consistency:</strong> The uniformity of physical constants (<span class="math">c, &#8463;, e</span>) across spacetime suggests a global constraint—what we interpret as a universal "exchange rate" for converting quantum potential into classical actuality.</li></ul></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">4. The Question: Quantifying the Price of the Edge</h2><p class="mb-6">Let us apply this to the Double Slit experiment. The electron passes through both slits (Dreamer/Semantics). To exist as a single dot on the screen (Pilot/Syntax), it must shed its infinite potential and select one coordinate.</p><div class="pl-4 border-l-4 border-indigo-200 my-6 italic text-slate-600"><p class="mb-2">The standard question is: <span class="text-slate-900 not-italic">How does it choose?</span></p><p>Our question is: <span class="text-slate-900 not-italic">What does it cost?</span></p></div><p class="mb-6">Standard quantum mechanics tells us that <span class="math">&Delta;x &Delta;p &ge; &#8463;/2</span>, but it treats this as a mathematical fact. We will show it is a budget constraint—the minimum action expenditure required to encode a binary distinction.</p><p class="mb-6">If the Pilot tries to know its position with absolute precision (<span class="math">&Delta;x &rarr; 0</span>), the cost in momentum uncertainty explodes (<span class="math">&Delta;p &rarr; &infin;</span>). This is not an annoying limit of our tools; it is the bankruptcy of the Action Budget. The system cannot afford to be perfectly defined.</p><p class="mb-8">Stephen Hawking asked: <span class="text-indigo-800">"What is it that breathes fire into the equations and makes a universe for them to describe?"</span></p><p class="text-lg font-medium text-slate-900">The answer is the <strong>Action Quota</strong>. Reality exists because the Dreamer pays a tax to become the Pilot.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter2')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter2" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part I &bull; Chapter 2</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-indigo-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">The Action-Information Bridge</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">Verb and Noun</p><p class="text-slate-500 italic font-sans">Chapter 2</p></header>
+                <div class="bg-indigo-50 p-8 rounded-xl text-indigo-900 mb-12 italic text-base leading-relaxed border border-indigo-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> Having established that physical reality emerges from a transaction between unmeasurable potential and finite structure, we now quantify the price of that transaction. We introduce the <strong>Bridge Postulate</strong>: the proposed equivalence between the cost of continuous evolution (per radian, <span class="math">&rho;<sub>0</sub></span>) and the cost of stable records (per cycle, <span class="math">2&pi;&rho;<sub>0</sub></span>). This unification suggests that quantum mechanics is not an arbitrary set of rules, but the inevitable accounting system for a finite <strong>Action Budget</strong>.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Dual Nature of the Quota</h2><p class="mb-6">Chapter 1 ended with a specific claim: the transaction between the Dreamer (Semantics) and the Pilot (Syntax) has a fundamental cost. We call this the <strong>Action Quota</strong> (<span class="math">&rho;<sub>0</sub></span>). Our task now is to derive its necessity from the logical structure of measurement itself.</p><p class="mb-6">The fundamental quantum of action appears in two distinct contexts in physics. We distinguish them rigorously:</p><ul class="list-none space-y-4 mb-8 pl-4 border-l-2 border-slate-200"><li><strong>Action per Radian (<span class="math">&rho;<sub>0</sub></span>):</strong> This is the fundamental "pixel" of continuous evolution. It is the cost of a single unit of phase change in the state vector. We identify this with the reduced Planck constant, <span class="math">&#8463;</span>.</li><li><strong>Action per Cycle (<span class="math">S<sub>cell</sub></span>):</strong> This is the cost of a stable, repeatable event. Just as a wave must complete a full <span class="math">2&pi;</span> rotation to be distinguishable from a fluctuation, a physical record requires a full cycle of action. We identify this with the full constant, <span class="math">h = 2&pi;&rho;<sub>0</sub></span>.</li></ul><p>Why this distinction? Consider the difference between <em>doing</em> and <em>being</em>. A <strong>verb</strong> (<em>to oscillate</em>) denotes continuous process—smooth evolution governed by <span class="math">&rho;<sub>0</sub></span> per radian. A <strong>noun</strong> (<em>a particle</em>) denotes a persistent entity—something you can point to and say "there it is." This requires a completed cycle (<span class="math">2&pi;&rho;<sub>0</sub></span>), because only a full rotation returns the system to a comparable state recognizable as "the same thing" across time.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Bridge: From Flow to Fold</h2><p class="mb-6">To transform this from philosophy to physics, we introduce the definitive equivalence that anchors Action Realism.</p><div class="my-8 p-8 border-y-2 border-indigo-100 bg-white text-center"><h3 class="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-4">The Bridge Postulate</h3><p class="mb-4 text-slate-700">We propose that the action cost of a persistent record (a "noun") is exactly one complete phase cycle of the continuous evolution (the "verb"):</p><div class="math-block">$$ S_{cell} = 2\pi\rho_0 $$</div></div><p class="mb-6">This is not assumed arbitrarily. In Chapter 4, we will show that any other relationship either allows information to be created without cost (violating thermodynamics) or prevents phase coherence (making measurement impossible).</p><h3 class="text-lg font-bold text-slate-800 mb-4 mt-8 font-sans">The Universal Resource Constraint: The Caustic Fold</h3><p class="mb-4">How do we visualize this limit? In Action Realism, the Semantic Field behaves like a fluid subject to <strong>Liouville Incompressibility</strong>—the principle that phase space volume is conserved under Hamiltonian flow.</p><div class="bg-slate-50 p-6 rounded-lg mb-6"><h4 class="font-bold text-slate-700 text-sm uppercase mb-2">Mathematical Sketch of the Mechanism</h4><ul class="list-disc ml-4 space-y-2 text-base"><li>In geometric optics, when light rays converge to a focal point, they form <strong>caustics</strong>—singularities where the intensity formally diverges.</li><li>In our framework, when the "Unmeasurable Pressure" of the Semantics is forced into a volume smaller than <span class="math">&rho;<sub>0</sub></span>, the field <strong>folds</strong>. The Jacobian of the coordinate transformation becomes singular.</li></ul></div><p class="mb-6">The "Particle" is simply a <strong>Caustic of Action</strong>. It is not a solid object found in the water; it is a stable geometric feature of the flow itself.</p><h3 class="text-lg font-bold text-slate-800 mb-4 mt-8 font-sans">First Consequence: The Uncertainty Bound</h3><p class="mb-4">If the "Particle" is a Caustic Fold formed by hitting the limit <span class="math">&rho;<sub>0</sub></span>, then we should be able to derive the standard limits of measurement.</p><div class="math-block">$$ N \approx \Delta x \Delta p / \rho_0 $$</div><p class="mb-4">For a single distinguishable state (<span class="math">N=1</span>), we must have:</p><div class="math-block">$$ \Delta x \Delta p \ge \rho_0 $$</div><p class="mb-4">The standard Heisenberg uncertainty relation states:</p><div class="math-block">$$ \Delta x \Delta p \ge \hbar/2 $$</div><p class="mb-4">Comparing these expressions, we identify our first empirical constraint:</p><div class="math-block font-bold text-indigo-900">$$ \rho_0 = \hbar/2 $$</div><p>This gives us the lower bound for a single conjugate pair. When we account for the full thermodynamic system in Chapter 5, we will find that the thermodynamically consistent value for the full cycle is <span class="math">h = 2&pi;&#8463;</span>, reconciling both constraints.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter1')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter3')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Part &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter3" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 3</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-emerald-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part II: Syntax</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Geometry from an Action Ceiling</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">The Birth of the Qubit</p><p class="text-slate-500 italic font-sans">Chapter 3</p></header>
+                <div class="bg-emerald-50 p-8 rounded-xl text-emerald-900 mb-12 italic text-base leading-relaxed border border-emerald-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> Having established the Bridge Postulate in Chapter 2, we now execute the first stage of the necessity proof: showing that the fundamental constraint on action uniquely determines the kinematic geometry of quantum theory. We introduce the <strong>Finite Variance Constraint</strong>, which dictates that the measurable world can only stabilize facts within strict boundaries defined by phase space incompressibility. From this single constraint, we demonstrate the inevitable emergence of the complex, projective geometry of the qubit (the Bloch sphere) and motivate the Born Rule as the unique probability measure consistent with the finite Action Budget.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Kinematic Necessity: Constraint as Origin</h2><p class="mb-6">We now perform the essential pivot: from philosophical necessity to mathematical derivation.</p><p class="mb-6">Chapter 2 established the Bridge Postulate: that every stable, measurable record corresponds to a fixed quantum of action <span class="math">S<sub>cell</sub> = 2&pi;&rho;<sub>0</sub></span>. In this chapter, we treat that postulate as a hard resource constraint. We ask: if the measurable world must pay this fixed price for every stable distinction, what kinematic structures are possible?</p><p class="mb-6">The Pilot's instruments—her measurements—can only resolve reality to a certain precision. Below that threshold, the Dreamer's ambiguity remains irreducible. This constraint means that the measurable world is fundamentally resource-bounded.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. Constraint: The Finite Variance Constraint</h2><p class="mb-6">The existence of a finite Action Quota (<span class="math">&rho;<sub>0</sub></span>) imposes a non-negotiable constraint on the variance associated with any measurable observable. This is the mathematical fulcrum of our entire derivation.</p><h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">The Balloon Analogy</h3><p class="mb-4">Visualize the state of a system as a balloon of fixed air volume. This is the classical Liouville incompressibility of phase space. You can squeeze the balloon to make it narrow in one direction, but the air must go somewhere. In the quantum case, the balloon's minimal phase-space volume is quantized in units of <span class="math">&rho;<sub>0</sub></span>.</p><div class="bg-slate-50 p-8 rounded-lg border border-slate-200 shadow-sm my-8"><strong class="block text-center text-sm font-bold uppercase tracking-widest text-emerald-600 mb-4">Lemma: Finite Variance Constraint</strong><p class="mb-4 text-center italic text-slate-600">In any measurable subsystem consistent with the Action Quota, the product of the variances of any two conjugate observables must be bounded from below:</p><div class="math-block text-xl">$$ \Delta A \cdot \Delta B \ge \frac{1}{2} |\langle [A, B] \rangle| = \rho_0 / 2 $$</div><p class="text-sm text-center mt-4 text-slate-500">This <span class="math">&rho;<sub>0</sub>/2</span> represents the <strong>irreducible uncertainty floor</strong>.</p></div></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. Geometry: The Emergence of the Sphere</h2><p class="mb-6">The Finite Variance Constraint doesn't just limit measurements—it <strong>sculpts the space of possibilities</strong>. The physical requirements of Convexity, Smoothness, and Rotational Symmetry force the boundary of pure states to be a sphere (the <strong>Bloch Sphere</strong>).</p><h3 class="text-lg font-bold text-slate-800 mb-2 font-sans">Why Complex Numbers?</h3><p class="mb-4">Why is the state space a 2D sphere rather than a 1D circle? Why do we need complex amplitudes <span class="math">&psi; = a + bi</span>? This follows from requiring Reversibility, Continuous Phase, and Abelian Addition.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">4. Statistics: The Birth of the Born Rule</h2><p class="mb-6">Having derived the shape of the state space, we now derive its statistical mechanics. We examine the family of probability rules <span class="math">P(i) &propto; |&psi;<sub>i</sub>|<sup>k</sup></span>. Why is <span class="math">k=2</span> (the Born Rule) the only option? Because only <span class="math">k=2</span> ensures that probabilities factor correctly for composite systems (No Signaling) and respects Action Conservation uniformly across the sphere.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter2')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter4')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter4" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 4</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-emerald-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part II: Syntax</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Dynamics from the Constraint</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">Unitary Evolution and the Schrödinger Equation</p><p class="text-slate-500 italic font-sans">Chapter 4</p></header>
+                <div class="bg-emerald-50 p-8 rounded-xl text-emerald-900 mb-12 italic text-base leading-relaxed border border-emerald-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> Having derived the static geometry of the quantum state space (the Bloch Sphere), we now show that this geometry, together with the finite action budget, uniquely determines the laws of time evolution. We show that the requirement to preserve the action budget (<span class="math">&rho;<sub>0</sub></span>) during continuous transformation leads to the <strong>Principle of Unitary Evolution</strong>. We invoke Stone's Theorem to derive the Hamiltonian as the generator of time translation and culminate with the derivation of the time-dependent Schrödinger equation.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Dynamical Necessity</h2><p class="mb-6">In Chapter 3, we derived the shape of the quantum state space from the variance constraint. But that derivation told us nothing about motion on the sphere. Nature chooses smooth flow. The question is: what law governs this flow? We will now show that the same action constraint that determined the geometry also determines the dynamics.</p><p class="mb-6">Any time evolution must satisfy two fundamental demands: Conservation of Distinction (Action Budget) and Geometric Coherence (Symmetry). By Wigner's Theorem, this forces <strong>Unitary Evolution</strong>.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Generator of Evolution</h2><p class="mb-6">By <strong>Stone's Theorem</strong>, any strongly continuous one-parameter unitary group <span class="math">U(t)</span> can be written as <span class="math">U(t) = e<sup>-iGt</sup></span>, where <span class="math">G</span> is a Hermitian operator. We identify this generator with the Hamiltonian <span class="math">H</span> (Energy) via dimensional analysis and Noether's Theorem.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. Deriving Schrödinger's Equation</h2><p class="mb-6">Having established the form <span class="math">U(t) = e<sup>-iHt/&rho;<sub>0</sub></sup></span>, the derivation of the fundamental equation of quantum dynamics is straightforward. Taking the time derivative:</p><div class="math-block">$$ \frac{d}{dt} |\psi(t)\rangle = - \frac{iH}{\rho_0} |\psi(t)\rangle $$</div><p class="mb-4">Multiplying by <span class="math">i&rho;<sub>0</sub></span>:</p><div class="math-block font-bold text-indigo-900 text-xl">$$ i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle $$</div><p class="mb-6">If we identify our Action Quota <span class="math">&rho;<sub>0</sub></span> with <span class="math">&#8463;</span> (which we will rigorously calibrate in Chapter 5), we recover the time-dependent Schrödinger equation.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter3')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter5')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter5" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 5</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-emerald-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part II: Syntax</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Thermodynamic Calibration</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">The Numerical Necessity</p><p class="text-slate-500 italic font-sans">Chapter 5</p></header>
+                <div class="bg-emerald-50 p-8 rounded-xl text-emerald-900 mb-12 italic text-base leading-relaxed border border-emerald-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> We have derived the full kinematic structure of quantum mechanics from the abstract Action Quota (<span class="math">&rho;<sub>0</sub></span>), but its numerical value remains arbitrary. We show that consistency between the derived quantum energy spectrum and the macroscopic laws of thermal physics (specifically, blackbody radiation) fixes <span class="math">&rho;<sub>0</sub></span> to coincide with Planck’s reduced constant, <span class="math">&#8463;</span>.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Final Necessity</h2><p class="mb-6">The Action Quota remains an abstract symbol. To claim that our framework reconstructs physics, we must pin <span class="math">&rho;<sub>0</sub></span> to a known constant. Blackbody radiation is the ideal calibration because it is material-independent, represents pure equilibrium, and is precisely measured.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Energy Density Calculation</h2><p class="mb-4">Using the geometric series summation, the average energy per mode becomes:</p><div class="math-block">$$ \langle E \rangle = \frac{2\pi\rho_0\nu}{e^{2\pi\rho_0\nu / k_B T} - 1} $$</div><p class="mb-4">Comparing this with the experimental Planck's law:</p><div class="math-block font-bold text-indigo-900">$$ 2\pi\rho_0 = h \implies \rho_0 = \hbar $$</div><p class="mb-6">Only <span class="math">&rho;<sub>0</sub> = &#8463;</span> reproduces the yellow Sun we observe. If it were half or double, the Sun would be invisible or dark red. The value is fixed by nature.</p></section>
+                <section class="mb-12 bg-slate-50 p-8 rounded-xl border border-slate-200"><h2 class="text-xl font-bold text-slate-900 mb-4 font-sans">Conclusion: The Complete Reconstruction</h2><p class="mb-4">The Action-Quota Reconstruction (AQR) is now complete. We have: 1. Established the Bridge Postulate, 2. Derived quantum kinematics, 3. Derived quantum dynamics, and 4. Calibrated the fundamental constant. Quantum mechanics emerges as the unique accounting system for a reality operating under a universal Action Budget.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter4')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter6')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Part &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter6" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 6</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-amber-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part III: Will</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Dynamic Field Theory</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">The Geometry of the Limit</p><p class="text-slate-500 italic font-sans">Chapter 6</p></header>
+                <div class="bg-amber-50 p-8 rounded-xl text-amber-900 mb-12 italic text-base leading-relaxed border border-amber-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> We introduce <strong>Dynamic Field Theory (DFT)</strong>, a framework that enforces the Action Quota on field excitations through a universal, Lorentz-covariant kernel <span class="math">K(&#9633;) = e<sup>-&#9633;/4&pi;&rho;<sub>0</sub></sup></span>. We prove that this kernel is the unique form that preserves unitarity (no ghosts), causality, and gauge invariance while rendering loop integrals finite. We demonstrate how this mechanism resolves the Hierarchy Problem and provides a ghost-free framework for Quantum Gravity.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Infinite Ledger</h2><p class="mb-6">Standard Quantum Field Theory (QFT) is built on an assumption of infinite capacity. This leads to the Ultraviolet Catastrophe. Action Realism rejects this premise. The Action Quota is a limit on existence.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Kernel: Implementing the Limit</h2><p class="mb-4">We postulate that the kinetic operator of any field is modified by a Kernel <span class="math">K(&#9633;)</span>. The modified propagator becomes:</p><div class="math-block">$$ D_{\rho_0}(k) = \frac{i}{k^2 - m^2 + i\epsilon} e^{-k^2/\Lambda_*^2} $$</div><p class="mb-4">We prove that under strict requirements of unitarity and causality, the unique form is <span class="math">K(k<sup>2</sup>) = e<sup>-k<sup>2</sup>/&Lambda;<sub>*</sub><sup>2</sup></sup></span>. This ties the abstract quantum limit to the field theory cutoff via <span class="math">&Lambda;<sub>*</sub><sup>2</sup> = 4&pi;&rho;<sub>0</sub></span>.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. The Ghost-Free Guarantee</h2><p class="mb-6">Because the kernel is an <strong>entire function</strong>, it has no poles. Thus, DFT modifies the weight of high-energy states but does not create new pathological states (ghosts).</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter5')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter7')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter7" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 7</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-amber-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part III: Will</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">Dynamic Self-Topology (DST)</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">Dissipative Memory and the Origin of Agency</p><p class="text-slate-500 italic font-sans">Chapter 7</p></header>
+                <div class="bg-amber-50 p-8 rounded-xl text-amber-900 mb-12 italic text-base leading-relaxed border border-amber-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> Having derived the laws of physics from the Action Quota, we now address the emergence of agency. We introduce <strong>Dynamic Self-Topology (DST)</strong>. We derive the <strong>Action Channel (<span class="math">M</span>)</strong> not as a postulate, but as a necessary order parameter arising from the Maximum Entropy Principle. We show that "Will" is the thermodynamic cost of maintaining this memory field against entropic decay.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Riddle of Agency</h2><p class="mb-6">How do systems emerge that don't just undergo physics, but navigate it? We propose that systems that exceed the density of change limit must offload excess action into a structural buffer: the Action Channel.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. The Derivation of Memory</h2><p class="mb-4">From the Maximum Entropy Principle, we derive the DST Master Equation:</p><div class="math-block">$$ \partial_t M(x,t) = - \frac{1}{\tau_m} M(x,t) + \beta [K * C](x,t) + \eta(x,t) $$</div><p class="mb-6">The kernel <span class="math">K</span> emerges naturally as the Green's function for the constraint.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">3. The Definition of Will</h2><p class="mb-6">We define the <strong>Fold of Life</strong> as the regime where this feedback loop becomes self-sustaining. "Will is the continuous thermodynamic work performed by a system to maintain the structure of <span class="math">M</span> against the decay term."</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter6')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button><button onclick="showView('chapter8')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button></footer>
+            </article>
+        </div>
+
+        <div id="view-chapter8" class="hidden fade-in bg-white min-h-screen pb-20">
+            <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3"><div class="max-w-3xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 8</span></div></div>
+            <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
+                <header class="mb-12 text-center"><div class="text-amber-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part III: Semantic Reintegration</div><h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">The Final Compact</h1><p class="text-2xl text-slate-400 italic font-serif mb-4">Auditable Truth and the Stewardship of Distinction</p><p class="text-slate-500 italic font-sans">Chapter 8</p></header>
+                <div class="bg-amber-50 p-8 rounded-xl text-amber-900 mb-12 italic text-base leading-relaxed border border-amber-100 font-sans"><strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong> We conclude Part III by translating the physical constraints of the Action Quota into an ethical and experimental imperative. This chapter introduces the concept of <strong>Stewardship of Distinction</strong>.</div>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">1. The Ethical Implication</h2><p class="mb-6">If the universe cannot stabilize an infinite number of facts, then every persistent structure represents a successful negotiation with the Action Budget. This leads to a profound ethical realization: <strong>Truth is expensive.</strong> Maintaining a coherent narrative requires continuous expenditure of action against entropy.</p></section>
+                <section class="mb-12"><h2 class="text-2xl font-bold text-slate-900 mb-6 font-sans">2. Five Principles</h2><ul class="list-disc ml-6 space-y-2 mb-6 text-base"><li><strong>Integration:</strong> Seek coherent synthesis.</li><li><strong>Differentiation:</strong> Value what makes things distinct.</li><li><strong>Recursion:</strong> Take responsibility for patterns we perpetuate.</li><li><strong>Boundary:</strong> Respect the metabolic cost of identity.</li><li><strong>Coherence:</strong> Build narratives that maximize future action space.</li></ul></section>
+                <section class="mb-12 bg-indigo-50 p-8 rounded-xl border border-indigo-200 text-center"><h2 class="text-2xl font-bold text-indigo-900 mb-4 font-serif italic">Epilogue: The Unfolding Story</h2><p class="mb-6 text-indigo-800 leading-relaxed">This book has shown that the deepest laws of physics follow from a single constraint: reality operates on a finite action budget. But this is not a closed conclusion. It is an invitation. The story continues, and every choice spends action against the blur.</p></section>
+                <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm"><button onclick="showView('chapter7')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button><button onclick="showView('home')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Return to Overview</button></footer>
+            </article>
+        </div>
+
+        <div id="view-part1-essays-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part I | Series I: Essays</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Against the Blur: Life in a Finite-Resolution Universe</h2><div class="pt-4"><button onclick="alert('Downloading ATB.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Being, Becoming, and the Architecture of Experience</h2><div class="pt-4"><button onclick="alert('Downloading BB.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">The Action Quota: Reality as Constrained Process</h2><div class="pt-4"><button onclick="alert('Downloading OnLimits.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Two Faces, One Constant: Action per Cycle and Action per Cell</h2><div class="pt-4"><button onclick="alert('Downloading S2E3.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+            </div></div>
+        </div>
+
+        <div id="view-gql2-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-amber-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part I | Series II: Incompleteness</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8"><div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Beyond the Ledger: Operational Incompleteness...</h2><div class="pt-4"><button onclick="alert('Downloading GQL2.pdf...')" class="text-amber-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div></div></div>
+        </div>
+
+        <div id="view-historical-toc" class="hidden fade-in bg-slate-100 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-slate-800 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-slate-600">Part I | Series 0: Historical</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8"><div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-700">The Curvature-Quota Ledger...</h2><div class="pt-4"><button onclick="alert('Downloading TheCQL v2.pdf...')" class="text-slate-400 font-medium text-sm flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Download Archived PDF</button></div></div><div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-700">A Finite-Information Axiom...</h2><div class="pt-4"><button onclick="alert('Downloading FIAR.pdf...')" class="text-slate-400 font-medium text-sm flex items-center"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Download Archived PDF</button></div></div></div></div>
+        </div>
+
+        <div id="view-reconstruction-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part II | Series I: Reconstruction</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Reconstructing Quantum Mechanics: Preface</h2><div class="pt-4"><button onclick="alert('Downloading Preface.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 1: From Variance Complementarity to the Unit Disk</h2><div class="pt-4"><button onclick="alert('Downloading Lemma1.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 2: From Disk Geometry to the Bloch Ball</h2><div class="pt-4"><button onclick="alert('Downloading Lemma2.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 3: The Unique Measurement Rule</h2><div class="pt-4"><button onclick="alert('Downloading Lemma3.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 4: Dynamics on the Bloch Ball</h2><div class="pt-4"><button onclick="alert('Downloading Lemma4.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 5: Unifying Scales</h2><div class="pt-4"><button onclick="alert('Downloading Lemma5.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 6: Tensor Product</h2><div class="pt-4"><button onclick="alert('Downloading Lemma6.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 7: Continuum Limit</h2><div class="pt-4"><button onclick="alert('Downloading Lemma7.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 8: Thermodynamic Calibration</h2><div class="pt-4"><button onclick="alert('Downloading Lemma8.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+            </div></div>
+        </div>
+
+        <div id="view-fold-kinematics-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II | Series II: Kinematics</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Action Quanta, GR Fold Optics...</h2><div class="pt-4"><button onclick="alert('Downloading ActionQ.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Fold Kinematics...</h2><div class="pt-4"><button onclick="alert('Downloading FoldK.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Quota-Constrained Gravity...</h2><div class="pt-4"><button onclick="alert('Downloading QG.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+            </div></div>
+        </div>
+
+        <div id="view-dft-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part3-hub')" class="text-sm font-medium text-slate-500 hover:text-blue-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-blue-600">Part III | Series I: Dynamic Field Theory</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Dynamic Field Theory: From Master Action...</h2><div class="pt-4"><button onclick="alert('Downloading DFTfromMAtoEF.pdf...')" class="text-blue-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Dynamic Field Theory: a Single-Scale Entire-Kernel...</h2><div class="pt-4"><button onclick="alert('Downloading NDFT.pdf...')" class="text-blue-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+            </div></div>
+        </div>
+
+        <div id="view-dst-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part3-hub')" class="text-sm font-medium text-slate-500 hover:text-amber-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part III | Series II: Dynamic Self-Topology</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Dynamic Informational Self-Topology...</h2><div class="pt-4"><button onclick="alert('Downloading NDIST.pdf...')" class="text-amber-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Action-Driven Dissipative Self-Organization...</h2><div class="pt-4"><button onclick="alert('Downloading DISTA1.pdf...')" class="text-amber-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Emergent Informational Density...</h2><div class="pt-4"><button onclick="alert('Downloading 11.PROTEINS.pdf...')" class="text-amber-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
+            </div></div>
+        </div>
+
+        <div id="view-code-registry" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Overview</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-slate-500">Computational Registry</span></div></div>
+            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="space-y-8"></div></div>
+        </div>
 
     </main>
 
-    <footer>
-        <hr>
-        <p style="font-size: 0.8rem; color: #777;">&copy; 2025 Action Realism Project</p>
-    </footer>
+    <footer class="w-full py-12 text-center text-slate-500 text-sm bg-slate-50 border-t border-slate-200"><div class="max-w-2xl mx-auto px-6 space-y-4"><p>&copy; 2024 Emiliano Shea. Action Realism Project.</p><p class="text-xs text-slate-400 italic">Supported by the legacy of a father who left behind the rarest commodity of all: time.</p></div></footer>
 
+    <script>
+        lucide.createIcons();
+        function showView(viewName) {
+            const views = [
+                'view-home', 
+                'view-chapter1', 'view-chapter2', 'view-chapter3', 'view-chapter4', 'view-chapter5', 'view-chapter6', 'view-chapter7', 'view-chapter8',
+                'view-part1-hub', 'view-part1-essays-toc', 'view-fold-kinematics-toc', 'view-historical-toc',
+                'view-part2-hub', 'view-reconstruction-toc', 'view-gql2-toc',
+                'view-part3-hub', 'view-dft-toc', 'view-dst-toc',
+                'view-code-registry'
+            ];
+            views.forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('hidden'); });
+            const selectedView = document.getElementById('view-' + viewName);
+            if (selectedView) { 
+                selectedView.classList.remove('hidden'); 
+                window.scrollTo(0, 0); 
+            }
+        }
+    </script>
 </body>
 </html>
