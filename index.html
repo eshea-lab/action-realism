@@ -1758,8 +1758,96 @@
         </div>
 
         <div id="view-gql2-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-amber-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part I | Series II: Incompleteness</span></div></div>
-            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8"><div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Beyond the Ledger: Operational Incompleteness...</h2><div class="pt-4"><button onclick="alert('Downloading GQL2.pdf...')" class="text-amber-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div></div></div>
+            
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
+                <div class="max-w-5xl mx-auto flex justify-between items-center">
+                    <button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-amber-600 flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
+                    </button>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part I | Series II: Incompleteness</span>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12">
+                <div class="grid gap-8">
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-amber-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Part I</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Resource-Bounded Incompleteness</h2>
+                                <p class="text-slate-500 text-sm font-medium">Operational Limits in Quota-Bounded Worlds</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                [cite_start]We assume the Action-Quota Principle[cite: 136], which posits that stable physical distinctions require a finite expenditure of action. We model systems constrained by this principle as quota-bounded worlds \(Q(V,N)\) which are limited not only in memory but in total action expenditure. [cite_start]We prove an Operational Bounded Diagonal Lemma[cite: 138], demonstrating that for any finite resource budget \(N\), there exists a physically specifiable unary predicate on codes that is undecidable by any procedure admissible within that budget. This yields a strict resource hierarchy: the set of decidable truths grows as action expenditure increases. [cite_start]We establish the Principle of Action-Indexed Progress[cite: 140], showing that extending the set of decidable truths requires a strictly non-zero investment of additional action. This implies that any finitely-resourced physical theory is necessarily operationally incomplete.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/RBI.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-amber-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Part II</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Unmeasurable Sector</h2>
+                                <p class="text-slate-500 text-sm font-medium">The Architecture of the Action Substrate</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                [cite_start]In Part I, we proved that any finite physical ledger is operationally incomplete[cite: 5]. Part II identifies the necessary source of the "fresh bits" that expand the ledger: an infinite structure \(U\) (the Inverse Limit) that cannot be fully measured but projects partial information into finite experiments. [cite_start]We identify this sector with the "Dreamer" (Semantics) and propose Dynamic Field Theory (DFT) as its candidate physical realization[cite: 6]. We introduce the Mechanism of the Fold, showing how local, quota-saturating updates in the continuous substrate \(U\) implement the discrete bits required by the forcing calculus, thereby providing a physical mechanism for the ledger expansion.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/TUS.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-amber-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Part III</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Quota-Critical Witnesses</h2>
+                                <p class="text-slate-500 text-sm font-medium">Experimental Signatures of the Action Limit</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                [cite_start]In Parts I and II, we established that a finite action ledger implies operational incompleteness and necessitates an unmeasurable substrate (\(U\)) populated by topological Folds[cite: 275]. In this final paper, we translate these theoretical claims into falsifiable experimental protocols. We design three Quota-Critical Witnesses: (1) the Simulation Complexity Witness, which predicts increased compressibility and min-entropy degradation when a QRNG is driven beyond its action capacity; (2) [cite_start]Ramsey Fisher Benchmarks, which verify that Fisher information plateaus when the accumulated measurement record exceeds the ledger capacity \(N_{max}\); and (3) Ultra-Dense Fermi Gases, which constrain the fundamental non-locality scale \(l_0\) via deviations in the equation of state[cite: 277, 278].
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/QCW.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div id="view-historical-toc" class="hidden fade-in bg-slate-100 min-h-screen pb-20">
