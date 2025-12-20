@@ -1768,18 +1768,208 @@
         </div>
 
         <div id="view-reconstruction-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part II | Series I: Reconstruction</span></div></div>
-            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Reconstructing Quantum Mechanics: Preface</h2><div class="pt-4"><button onclick="alert('Downloading Preface.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 1: From Variance Complementarity to the Unit Disk</h2><div class="pt-4"><button onclick="alert('Downloading Lemma1.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 2: From Disk Geometry to the Bloch Ball</h2><div class="pt-4"><button onclick="alert('Downloading Lemma2.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 3: The Unique Measurement Rule</h2><div class="pt-4"><button onclick="alert('Downloading Lemma3.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 4: Dynamics on the Bloch Ball</h2><div class="pt-4"><button onclick="alert('Downloading Lemma4.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 5: Unifying Scales</h2><div class="pt-4"><button onclick="alert('Downloading Lemma5.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 6: Tensor Product</h2><div class="pt-4"><button onclick="alert('Downloading Lemma6.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 7: Continuum Limit</h2><div class="pt-4"><button onclick="alert('Downloading Lemma7.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Lemma 8: Thermodynamic Calibration</h2><div class="pt-4"><button onclick="alert('Downloading Lemma8.pdf...')" class="text-indigo-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-            </div></div>
+            
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
+                <div class="max-w-5xl mx-auto flex justify-between items-center">
+                    <button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
+                    </button>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II | Series I: Reconstruction</span>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12">
+                <div class="grid gap-8">
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Preface</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Reconstructing Quantum Mechanics</h2>
+                                <p class="text-slate-500 text-sm font-medium">From a Single Variance Axiom</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We present an operational reconstruction of quantum mechanics from a single foundational axiom: a variance complementarity condition between incompatible measurements. Unlike traditional axiomatic approaches that postulate complex Hilbert spaces, we show that the full mathematical structure—including the Bloch sphere, Born rule, tensor product, Heisenberg commutator, and the specific value of Planck's constant—emerges necessarily from this one constraint through eight sequential derivations.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/PrefaceQR.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 1</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">From Variance Complementarity to the Unit Disk</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We present a minimal, operational, and fully self-contained derivation of the unit disk \(a^2 + b^2 \le 1\) for the expectation values of two <strong>maximally complementary</strong> dichotomic measurements. The key postulate is a single, variance-based complementarity condition \(\mathrm{Var}(A) + \mathrm{Var}(B) \ge 1\). This has a direct operational interpretation: no physical state can simultaneously minimize the uncertainties (statistical variance) of two maximally incompatible binary measurements. From this single assumption, we obtain the Bloch-disk geometry immediately, without <strong>presupposing</strong> Hilbert space, complex numbers, or any specifically quantum mathematical structure. This result forms the foundational base for Lemma 2.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma1.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 2</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">From Disk Geometry to the Bloch Ball</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We build upon the 2D disk constraint established in Lemma 1. By introducing three operational axioms—(R1) <strong>Continuity</strong>, (R2) <strong>Isotropy</strong>, and (R3) <strong>Pairwise State Determination</strong>—we show that the state space is necessarily three-dimensional. The core of the proof relies on a dimensional "sandwich":
+                                <br>1. A <em>dimensional-forcing</em> argument (using Isotropy) shows \(\dim(\Omega) > 2\).
+                                <br>2. A <em>dimensional-capping</em> argument (using Pairwise Determination) shows \(\dim(\Omega) \le 3\).
+                                <br>With the dimension uniquely fixed at 3, we show that Isotropy and the universal disk constraint of Lemma 1 force the full state space to be the 3D unit ball, \(B^3\).
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma2.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 3</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Unique Measurement Rule</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <div class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Lemma 1 established that complementary binary observables obey a fundamental variance bound. Lemma 2 showed that isotropy inflates this into a 3D Euclidean ball. In this note we prove Lemma 3: given this geometry and the operational axioms of convexity and isotropy, the <em>only</em> admissible measurement rule is the Born Rule:
+                                <div class="math-block my-2 py-2 text-xs">$$ p(+1 \mid \vec{s},\vec{m})=\frac{1+\vec{s}\cdot\vec{m}}{2} $$</div>
+                                The Born rule emerges as the unique affine function consistent with operational constraints, requiring no additional quantum postulates.
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma3.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 4</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Dynamics on the Bloch Ball</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Building on Lemma 2 and Lemma 3, we characterize all admissible dynamical transformations. The operational axioms of <strong>Reversibility</strong>, <strong>Continuity</strong>, and <strong>Probability Preservation</strong> imply that every physical evolution on the Bloch ball is a proper rotation, \(R(t) \in SO(3)\). We then show that the requirement of a consistent projective representation forces a lift to the universal double cover, \(SU(2)\). This topological necessity implies that the underlying state space is a two-dimensional <strong>complex Hilbert space</strong> \(\mathbb{C}^2\) with <strong>linear and unitary</strong> dynamics.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma4.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 5</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Unifying Scales</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                This reconstruction has introduced two operationally distinct action scales. Lemma 1 defined a <em>static</em> or <strong>algebraic</strong> scale, \(\hbar\). Lemma 4 defined a <em>dynamic</em> scale, \(\kappa\). In this lemma we prove that these two scales must be identical: \(\kappa = \hbar\). The proof relies on the Hamiltonian's dual role as both a generator of evolution and a physical observable. Internal consistency between dynamics (Schrödinger picture) and measurement algebra (Heisenberg picture) enforces a single fundamental action scale.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma5.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 6</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Tensor Product</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We extend the reconstruction to composite systems (\(N=2\)). We address the <strong>Interaction Gap</strong>: the observation that the direct sum algebra of two independent qubits (dimension 6) is insufficient to support reversible interactions. We invoke the principle of <strong>Global Action Consistency</strong>: any generator of reversible evolution must exist as an observable within the algebra. We prove that adjoining a single generic nonlocal interaction generator forces the observable space to expand from \(su(2) \oplus su(2)\) to the full tensor product \(su(4)\) via commutator closure.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma6.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 7</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Continuum Limit</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We extend the reconstruction from finite-dimensional spins to continuous variables. We demonstrate that the Heisenberg algebra \([x,p] = i\hbar\) is not a fundamental postulate but the first-order flat approximation to the geometry of the unitary group \(SU(2)\). By applying the Wigner-Inönü group contraction in the limit of large system size (\(J \to \infty\)), we derive the canonical commutation relation as the local linearization of angular momentum. Crucially, the Action Quota derived in Lemma 1 survives this limit unchanged: the uncertainty principle is simply the persistence of the state space's intrinsic curvature in the tangent plane approximation.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma7.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Lemma 8</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Thermodynamic Calibration</h2>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                In Lemmas 1–7, we derived the structural framework of quantum mechanics from the Action Quota axiom. However, these derivations treated the action scale as an algebraic free parameter. In this final lemma, we determine the numerical value of this scale. We posit that the operational variance bound of Lemma 1 manifests thermodynamically as a kinematic constraint: field modes accept energy in discrete action increments \(\rho_0\). By deriving the Stefan-Boltzmann law from this ansatz and matching it to experimental data, we identify \(\rho_0 = \hbar\). This completes the reconstruction: structure is forced by information constraints, while scale is fixed by thermodynamic consistency.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/Lemma8.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div id="view-fold-kinematics-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
