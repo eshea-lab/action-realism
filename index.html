@@ -2061,12 +2061,175 @@
         </div>
 
         <div id="view-fold-kinematics-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II | Series II: Kinematics</span></div></div>
-            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Action Quanta, GR Fold Optics...</h2><div class="pt-4"><button onclick="alert('Downloading ActionQ.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Fold Kinematics...</h2><div class="pt-4"><button onclick="alert('Downloading FoldK.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Quota-Constrained Gravity...</h2><div class="pt-4"><button onclick="alert('Downloading QG.pdf...')" class="text-emerald-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-            </div></div>
+            
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
+                <div class="max-w-5xl mx-auto flex justify-between items-center">
+                    <button onclick="showView('part2-hub')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
+                    </button>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II | Series II: Kinematics</span>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12">
+                <div class="grid gap-8">
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Preface</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Geometry of the Limit</h2>
+                                <p class="text-slate-500 text-sm font-medium">The Architecture of the Fold: From Flow to Caustic</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                This series reconstructs the geometry of matter from the principle of finite action capacity. We posit a maximum action throughput per coarse-grained symplectic channel—the Action Quota (\(\rho_0\))—and propose that the quantization of matter is not a breakdown of continuity, but a consequence of incompressibility. When a continuous flux of action exceeds the capacity of a phase-space channel, the field buckles, creating a Fold. These folds generate caustics which appear to the observer as stable particles. This preface outlines the mechanism and introduces four derivations: the geometric origin of uncertainty, the discrete spectra of atoms, the topological origin of spin and exclusion, and the nature of gravity as a macroscopic saturation limit.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/GeometryoftheLimit.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Paper I</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Area-Phase Holonomy</h2>
+                                <p class="text-slate-500 text-sm font-medium">Local Geometry: The Cost of the Turn</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We present a geometric derivation of quantum kinematics from a single resource constraint: the finite action capacity per \(2\pi\) phase cycle, measured by the Action Quota \(\rho_0\). We postulate that the physical phase acquired by a system is given by the symplectic area enclosed by its closed trajectory in phase space, scaled by \(\hbar\). From this Area-Phase Holonomy, we derive the Weyl Relations and recover the canonical commutation relation \([x,p]=i\hbar\). We conclude that quantum uncertainty is not an intrinsic fuzziness of nature, but the geometric signature of encoding information in a phase space with finite action capacity.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/AreaPhaseHolonomy.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Paper II</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Caustic Ladder</h2>
+                                <p class="text-slate-500 text-sm font-medium">Spectra: The Steps of the Limit</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We derive the discrete energy spectrum of quantum systems from the constraint imposed by the Action Quota on the geometry of phase-space flows. We show that when a continuous action flow saturates the Liouville capacity of a phase-space channel, the field must fold. Applying semiclassical methods to the canonical fold catastrophe, we find that constructive interference is only possible at discrete "stations" quantized in units set by \(\rho_0\). This mechanism generates the Caustic Ladder—a discrete spectrum \(E_n \approx E_0 + n\rho_0\nu\)—without postulating field discreteness.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/CausticLadder.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Paper III</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Topological Seeds</h2>
+                                <p class="text-slate-500 text-sm font-medium">Topology: The Twist of the Limit</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We construct a geometric model for intrinsic angular momentum (spin) and exclusion principles based on the topology of action folds. We propose that the "particle" is a twisted fold in the phase-space sheet. We model this object as a topological defect with an internal frame that naturally adopts a Möbius-like topology, requiring a \(4\pi\) rotation to return to its initial configuration. This model recovers the phenomenology of Spin-\(1/2\). Furthermore, we test this model against the capacity of electron shells, showing that packing these twisted folds yields a capacity consistent with the \(2n^2\) rule.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/TopologicalSeeds.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Paper IV</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Gravity as a Macroscopic Caustic</h2>
+                                <p class="text-slate-500 text-sm font-medium">Gravitational Optics: The Limit of Spacetime</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We extend the Action Quota framework to the macroscopic scale, treating General Relativity as the optics of a capacity-limited field. We show how the fold normal form in Fermat optics yields an Airy-profile universal shape, modeling the Event Horizon as a physical Macroscopic Fold where the action density approaches the fundamental ceiling \(\rho_0\). We propose \(\rho_0\) as the physical parameter controlling the effective semiclassical scale, leading to a universal Airy Law intensity profile for gravitational lensing.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/GravityasMC.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Paper V</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Geometry of Assembly</h2>
+                                <p class="text-slate-500 text-sm font-medium">Caustic Packing and the Periodic Table</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We extend the fold-caustic framework to multi-electron atoms, framing atomic structure as a topological packing problem. We derive the periodic skeleton from two geometric mechanisms: (1) The Madelung \((n+l)\) Rule emerges from the Stabilization Cost Functional, where topological twisting incurs a geometric cost. (2) Chemical Anomalies (e.g., Cr, Cu) are resolved by a Locking Cost Functional, where the penalty for domain walls outweighs orbital energy gaps. This reconstructs the Periodic Table as the optimal filling sequence of a capacity-limited topological ledger.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/GeometryofAssembly.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Student Guide</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Reconstructing the Periodic Table</h2>
+                                <p class="text-slate-500 text-sm font-medium">A Geometric Guide for Students</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                This guide provides a step-by-step reconstruction of the entire Periodic Table using the principles of Action Realism. Instead of memorizing the Madelung rule \((n+l)\), we calculate the "packing cost" for each electron shell based on geometric constraints. We compare these results side-by-side with standard quantum mechanics, showing how simple cost functions can predict the structure of matter, including the famous anomalies like Chromium and Copper.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/PTABLE.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div id="view-dft-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
