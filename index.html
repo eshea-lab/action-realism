@@ -37,23 +37,6 @@
             border: 1px solid #e2e8f0; 
         }
     </style>
-    
-    <script>
-        function showView(viewId) {
-            // Hide all views
-            const views = document.querySelectorAll('[id^="view-"]');
-            views.forEach(view => {
-                view.classList.add('hidden');
-            });
-            
-            // Show target view
-            const target = document.getElementById('view-' + viewId);
-            if (target) {
-                target.classList.remove('hidden');
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
 </head>
 <body class="bg-paper text-slate-800 flex flex-col min-h-screen">
 
@@ -65,10 +48,9 @@
             </div>
             
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-                <a href="#" onclick="showView('home'); document.getElementById('origin').scrollIntoView({behavior: 'smooth'});" class="hover:text-emerald-600 transition-colors">The Origin</a>
-                <a href="#" onclick="showView('home'); document.getElementById('structure').scrollIntoView({behavior: 'smooth'});" class="hover:text-emerald-600 transition-colors">Library</a>
-                <a href="#" onclick="showView('code-registry')" class="hover:text-emerald-600 transition-colors">Code</a>
-                <a href="#" onclick="showView('home'); document.getElementById('collaborate').scrollIntoView({behavior: 'smooth'});" class="hover:text-emerald-600 transition-colors">Collaborate</a>
+                <a href="#" onclick="showView('home'); document.getElementById('origin').scrollIntoView();" class="hover:text-emerald-600 transition-colors">The Origin</a>
+                <a href="#" onclick="showView('home'); document.getElementById('structure').scrollIntoView();" class="hover:text-emerald-600 transition-colors">Structure</a>
+                <a href="#" onclick="showView('home'); document.getElementById('collaborate').scrollIntoView();" class="hover:text-emerald-600 transition-colors">Collaborate</a>
             </div>
             <button class="md:hidden text-slate-500 hover:text-emerald-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
@@ -77,7 +59,7 @@
     <main class="flex-grow">
         
         <div id="view-home" class="fade-in">
-            <section id="origin" class="py-24 px-6 text-center border-b border-slate-200 bg-white scroll-mt-20">
+            <section class="py-24 px-6 text-center border-b border-slate-200 bg-white">
                 <div class="max-w-4xl mx-auto space-y-6">
                     <img src="pdfs/ARlogo.png" alt="Action Realism Logo" class="h-24 w-auto mx-auto mb-8">
                     
@@ -90,10 +72,12 @@
 
                     <p class="text-lg font-medium text-slate-800 pt-2 tracking-wide uppercase text-xs">By Emiliano Shea</p>
                     <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-6">Reality is not a given; it's an existential transaction. <br>We are not passive observers, but active participants paying a thermodynamic price to carve meaning out of the noise.</p>
+                    
+                    <div class="pt-8"><a href="#origin" class="btn-transition inline-block bg-slate-900 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Read the Preface</a></div>
                 </div>
             </section>
 
-            <section id="structure" class="py-20 px-6 bg-white border-t border-slate-200 scroll-mt-20">
+            <section id="structure" class="py-20 px-6 bg-white border-t border-slate-200">
                 <div class="max-w-6xl mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl font-bold text-slate-900">Reconstructing Reality</h2>
@@ -107,6 +91,7 @@
                                 <h4 class="text-lg font-medium text-indigo-700 mb-4">Semantics</h4>
                                 <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Defining the conflict between the infinite potential of the <strong>Dreamer</strong> and the finite <strong>Pilot</strong>.</p>
                                 <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter1')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 1</button><button onclick="showView('chapter2')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 2</button></div></div>
                                     <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part1-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
                                 </div>
                             </div>
@@ -118,6 +103,7 @@
                                 <h4 class="text-lg font-medium text-emerald-700 mb-4">Syntax</h4>
                                 <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Deriving the laws of quantum mechanics from the cost of existence.</p>
                                 <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter3')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 3</button><button onclick="showView('chapter4')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 4</button><button onclick="showView('chapter5')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 5</button></div></div>
                                     <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part2-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
                                 </div>
                             </div>
@@ -129,6 +115,7 @@
                                 <h4 class="text-lg font-medium text-amber-700 mb-4">Will</h4>
                                 <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Extending to the continuum and the emergence of agency.</p>
                                 <div class="space-y-3 pt-4 border-t border-slate-100">
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter6')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 6</button><button onclick="showView('chapter7')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 7</button><button onclick="showView('chapter8')" class="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-semibold rounded border border-amber-200 transition-colors">Ch 8</button></div></div>
                                     <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part3-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
                                 </div>
                             </div>
@@ -137,12 +124,12 @@
                 </div>
             </section>
 
-            <section id="collaborate" class="py-20 px-6 bg-slate-900 text-white text-center scroll-mt-20">
+            <section id="collaborate" class="py-20 px-6 bg-slate-900 text-white text-center">
                 <div class="max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-4xl font-bold">From Solitude to Collaboration</h2>
                     <div class="text-slate-300 text-lg leading-relaxed space-y-4">
                         <p>This project has been a study in solitude. I used Artificial Intelligence not to replace thought, but to simulate the vigorous peer review I could not access.</p>
-                        <p>Now, I open that door. I am seeking the pressure of scrutiny. Tell me where I might be wrong. Help me calculate the hidden items I might have missed.</p>
+                        <p>Now, I open that door. I am seeking the pressure of scrutiny. Tell me where I might be wrong. Help me calculate the hidden items I might have missed. I want this to be an active collaboration to improve an ongoing project that is always open-ended and constantly evolving.</p>
                     </div>
                     <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-left space-y-4 mt-8">
                         <label class="block text-sm font-medium text-slate-300">Share your critique or insight</label>
@@ -158,9 +145,17 @@
             <div class="max-w-5xl mx-auto px-6 mt-16">
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">Semantics: The Unmeasurable Pressure</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2">
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('part1-essays-toc')">
                         <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
-                        <div class="p-8"><h2 class="text-2xl font-bold text-slate-900 mb-3">Foundational Essays</h2><p class="text-slate-600 mb-6 leading-relaxed">The philosophical and ontological bedrock of Action Realism.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>4 Papers</span></div></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Foundational Essays</h2><p class="text-slate-600 mb-6 leading-relaxed">The philosophical and ontological bedrock of Action Realism.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>4 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer" onclick="showView('gql2-toc')">
+                        <div class="h-2 bg-amber-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-amber-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Incompleteness</h2><p class="text-slate-600 mb-6 leading-relaxed">Operational incompleteness and the existence of an unmeasurable sector.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>1 Paper</span></div></div>
+                    </div>
+                    <div class="group bg-slate-50 rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all cursor-pointer" onclick="showView('historical-toc')">
+                        <div class="h-2 bg-slate-400 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-200 px-2 py-1 rounded">Series 0</span><i data-lucide="archive" class="w-5 h-5 text-slate-400 group-hover:text-slate-600 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-700 mb-3">Historical Archive</h2><p class="text-slate-500 mb-4 leading-relaxed">Early manuscripts and code that laid the groundwork for Action Realism.</p><div class="flex items-center text-sm text-slate-400 border-t border-slate-200 pt-4"><i data-lucide="history" class="w-4 h-4 mr-2"></i><span>2 Legacy Papers</span></div></div>
                     </div>
                 </div>
             </div>
@@ -171,9 +166,13 @@
             <div class="max-w-5xl mx-auto px-6 mt-16">
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Action Quota Library</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
-                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2">
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('reconstruction-toc')">
+                        <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">The Reconstruction Archive</h2><p class="text-slate-600 mb-6 leading-relaxed">The formal eight-lemma derivation of quantum mechanics from the single axiom of variance complementarity.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>8 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('fold-kinematics-toc')">
                         <div class="h-2 bg-emerald-500 w-full group-hover:h-3 transition-all"></div>
-                        <div class="p-8"><h2 class="text-2xl font-bold text-slate-900 mb-3">Fold Kinematics & GR</h2><p class="text-slate-600 mb-6 leading-relaxed">Applied analysis of the Action Quota in gravitational lensing.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Fold Kinematics & GR</h2><p class="text-slate-600 mb-6 leading-relaxed">Applied analysis of the Action Quota in gravitational lensing and caustic formation.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
                     </div>
                 </div>
             </div>
@@ -185,43 +184,14 @@
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Will: Architecture of the Fold</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('dft-toc')">
-                        <div class="h-2 bg-rose-500 w-full group-hover:h-3 transition-all"></div>
-                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-rose-600 uppercase tracking-wider bg-rose-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-rose-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Dynamic Field Theory</h2><p class="text-slate-600 mb-6 leading-relaxed">The continuum substrate. A symmetry-respecting field theory where finite information is enforced by a single, Lorentz-covariant, entire kernel.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
+                        <div class="h-2 bg-blue-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Dynamic Field Theory</h2><p class="text-slate-600 mb-6 leading-relaxed">The continuum substrate. A symmetry-respecting field theory where finite information is enforced by a single, Lorentz-covariant, entire kernel.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>2 Papers</span></div></div>
+                    </div>
+                    <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('dst-toc')">
+                        <div class="h-2 bg-amber-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Series II</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-amber-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Dynamic Self-Topology</h2><p class="text-slate-600 mb-6 leading-relaxed">The emergence of agency. Deriving the Action Channel (<span class="math">M</span>) from the Maximum Entropy Principle.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>3 Papers</span></div></div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="view-dft-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part3-hub')" class="text-sm font-medium text-slate-500 hover:text-rose-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Series III</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-rose-600">Dynamic Field Theory</span></div></div>
-            <div class="max-w-4xl mx-auto px-6 mt-12 grid gap-8">
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 border-l-4 border-l-rose-500">
-                    <h2 class="text-xl font-bold text-slate-900">Flagship: Dynamic Field Theory</h2>
-                    <p class="text-slate-500 text-sm mb-4">Finite Informational Curvature from Planck to the Cosmos</p>
-                    <div class="bg-slate-50 p-4 rounded text-sm text-slate-600 mb-4 font-serif">DFT replaces ultraviolet cures with a single Lorentz-scalar quota. Predicts a TeV "Hawking shoulder" and vacuum energy density.</div>
-                    <a href="pdfs/FlagshipDFT.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded hover:bg-rose-600 transition-colors">Download PDF</a>
-                </div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 border-l-4 border-l-rose-500">
-                    <h2 class="text-xl font-bold text-slate-900">From Master Action to Emergent Fields</h2>
-                    <p class="text-slate-500 text-sm mb-4">Constructing the Quota-Regulated Standard Model</p>
-                    <div class="bg-slate-50 p-4 rounded text-sm text-slate-600 mb-4 font-serif">Deriving the exponential kernel which supplies an intrinsic UV cut-off while preserving Lorentz symmetry.</div>
-                    <a href="pdfs/DFTfromMAtoEF.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded hover:bg-rose-600 transition-colors">Download PDF</a>
-                </div>
-                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 border-l-4 border-l-rose-500">
-                    <h2 class="text-xl font-bold text-slate-900">The Single-Scale Substrate</h2>
-                    <p class="text-slate-500 text-sm mb-4">Entire Kernels, Unitarity, and Microcausality</p>
-                    <div class="bg-slate-50 p-4 rounded text-sm text-slate-600 mb-4 font-serif">Rigorous mathematical proofs for spectral safety and microcausality bounds of the Exponential Kernel.</div>
-                    <a href="pdfs/NDFT.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded hover:bg-rose-600 transition-colors">Download PDF</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="view-code-registry" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-slate-600">Code Registry</span></div></div>
-            <div class="max-w-5xl mx-auto px-6 mt-16 text-center">
-                <i data-lucide="terminal" class="w-12 h-12 text-slate-300 mx-auto mb-4"></i>
-                <h2 class="text-2xl font-bold text-slate-900">Simulation Registry</h2>
-                <p class="text-slate-500 mt-2">Python notebooks and lattice simulations will be populated here.</p>
             </div>
         </div>
 
@@ -2283,32 +2253,24 @@
 
     </main>
 
-    <footer class="w-full py-12 text-center text-slate-500 text-sm bg-slate-50 border-t border-slate-200">
-        <div class="max-w-2xl mx-auto px-6 space-y-4">
-            <p>&copy; 2025 Emiliano Shea. Action Realism Project.</p>
-            <p class="text-xs text-slate-400 italic">Supported by the legacy of a father who left behind the rarest commodity of all: time.</p>
-        </div>
-    </footer>
+    <footer class="w-full py-12 text-center text-slate-500 text-sm bg-slate-50 border-t border-slate-200"><div class="max-w-2xl mx-auto px-6 space-y-4"><p>&copy; 2025 Emiliano Shea. Action Realism Project.</p><p class="text-xs text-slate-400 italic">Supported by the legacy of a father who left behind the rarest commodity of all: time.</p></div></footer>
 
     <script>
-        // Initialize Icons
         lucide.createIcons();
-
-        // Improved View Switcher (Dynamic)
         function showView(viewName) {
-            // Automatically hide ANY element that starts with "view-"
-            const allViews = document.querySelectorAll('[id^="view-"]');
-            allViews.forEach(view => {
-                view.classList.add('hidden');
-            });
-
-            // Show the specific view requested
+            const views = [
+                'view-home', 
+                'view-chapter1', 'view-chapter2', 'view-chapter3', 'view-chapter4', 'view-chapter5', 'view-chapter6', 'view-chapter7', 'view-chapter8',
+                'view-part1-hub', 'view-part1-essays-toc', 'view-fold-kinematics-toc', 'view-historical-toc',
+                'view-part2-hub', 'view-reconstruction-toc', 'view-gql2-toc',
+                'view-part3-hub', 'view-dft-toc', 'view-dst-toc',
+                'view-code-registry'
+            ];
+            views.forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('hidden'); });
             const selectedView = document.getElementById('view-' + viewName);
             if (selectedView) { 
                 selectedView.classList.remove('hidden'); 
-                window.scrollTo({ top: 0, behavior: 'smooth' }); 
-            } else {
-                console.warn('View not found:', viewName);
+                window.scrollTo(0, 0); 
             }
         }
     </script>
