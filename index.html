@@ -1758,19 +1758,44 @@
             </div>
         </div>
 
-        <div id="view-gql2-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
+<div id="view-gql2-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
             
             <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
                 <div class="max-w-5xl mx-auto flex justify-between items-center">
                     <button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-amber-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
                     </button>
-                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part I | Series II: Incompleteness</span>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Research Series | Beyond the Ledger</span>
                 </div>
             </div>
 
             <div class="max-w-4xl mx-auto px-6 mt-12">
                 <div class="grid gap-8">
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-slate-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-slate-600 uppercase tracking-wider bg-slate-100 px-2 py-1 rounded">Companion</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Foundations of the Finite Ledger</h2>
+                                <p class="text-slate-500 text-sm font-medium">A Physical Reconstruction of Operational Incompleteness</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                [cite_start]We synthesize results from the thermodynamics of computation (Landauer), quantum speed bounds (Margolus-Levitin), and embedded-observer inference limits (Wolpert) to develop a resource-indexed framework for epistemic access[cite: 5]. [cite_start]We model the observer (the "Pilot") as operating within a quota-bounded world \(Q(V,N)\) and interpret recorded facts (the "Ledger") as physical distinctions requiring finite action expenditure[cite: 6]. [cite_start]We argue that any finite Ledger is necessarily incomplete relative to the underlying nonlocal quantum state (the "Dreamer"), and show how expanding the budget converts undecidable predicates into decidable ones via "Quota Forcing"[cite: 7, 8].
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/RBI2.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Companion Paper</span>
+                        </div>
+                    </div>
 
                     <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-amber-500 p-6 md:p-8">
                         <div class="flex justify-between items-start mb-4">
@@ -1785,7 +1810,7 @@
                         <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
                             <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
                             <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
-                                We assume the Action-Quota Principle, which posits that stable physical distinctions require a finite expenditure of action. We model systems constrained by this principle as quota-bounded worlds \(Q(V,N)\) which are limited not only in memory but in total action expenditure. We prove an Operational Bounded Diagonal Lemma, demonstrating that for any finite resource budget \(N\), there exists a physically specifiable unary predicate on codes that is undecidable by any procedure admissible within that budget. This yields a strict resource hierarchy: the set of decidable truths grows as action expenditure increases. We establish the Principle of Action-Indexed Progress, showing that extending the set of decidable truths requires a strictly non-zero investment of additional action. This implies that any finitely-resourced physical theory is necessarily operationally incomplete.
+                                [cite_start]We assume the Action-Quota Principle, which posits that stable physical distinctions require a finite expenditure of action[cite: 364]. [cite_start]We model systems constrained by this principle as quota-bounded worlds \(Q(V,N)\)[cite: 365]. [cite_start]We prove an Operational Bounded Diagonal Lemma, demonstrating that for any finite resource budget \(N\), there exists a physically specifiable predicate \(G_N\) that is undecidable by any procedure admissible within that budget[cite: 366]. [cite_start]This yields a strict resource hierarchy \(\mathcal{D}(N) \subsetneq \mathcal{D}(2N+C)\), establishing the Principle of Action-Indexed Progress[cite: 367, 368].
                             </p>
                         </div>
 
@@ -1793,7 +1818,7 @@
                             <a href="pdfs/RBI.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
                                 <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
                             </a>
-                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                            <span class="text-xs text-slate-400 italic">Logic & Proofs</span>
                         </div>
                     </div>
 
@@ -1802,7 +1827,7 @@
                             <div>
                                 <span class="text-xs font-bold text-amber-600 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Part II</span>
                                 <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Unmeasurable Sector</h2>
-                                <p class="text-slate-500 text-sm font-medium">The Architecture of the Action Substrate</p>
+                                <p class="text-slate-500 text-sm font-medium">The Architecture of Action & Inverse Limits</p>
                             </div>
                             <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
                         </div>
@@ -1810,7 +1835,7 @@
                         <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
                             <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
                             <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
-                                In Part I, we proved that any finite physical ledger is operationally incomplete. Part II identifies the necessary source of the "fresh bits" that expand the ledger: an infinite structure \(U\) (the Inverse Limit) that cannot be fully measured but projects partial information into finite experiments. We identify this sector with the "Dreamer" (Semantics) and propose Dynamic Field Theory (DFT) as its candidate physical realization. We introduce the Mechanism of the Fold, showing how local, quota-saturating updates in the continuous substrate \(U\) implement the discrete bits required by the forcing calculus, thereby providing a physical mechanism for the ledger expansion.
+                                [cite_start]We develop a unified ontology where the "fresh bits" required to resolve the incompleteness of the finite ledger originate from the Unmeasurable Sector \(U\)[cite: 527]. [cite_start]We formally define \(U\) as the Inverse Limit of finite ledger states \( \mathcal{U} = \varprojlim \mathcal{S}_N \)[cite: 536]. [cite_start]We propose Infinite Derivative Field Theory (IDFT) with a ghost-free exponential kernel as the physical substrate[cite: 523, 538]. [cite_start]We introduce the "Mechanism of the Fold," where local action saturation triggers topological defect nucleation, effectively converting unmeasurable potential into measurable ledger facts[cite: 524, 529].
                             </p>
                         </div>
 
@@ -1818,7 +1843,7 @@
                             <a href="pdfs/TUS.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
                                 <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
                             </a>
-                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                            <span class="text-xs text-slate-400 italic">Ontology & Architecture</span>
                         </div>
                     </div>
 
@@ -1835,7 +1860,7 @@
                         <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
                             <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
                             <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
-                                In Parts I and II, we established that a finite action ledger implies operational incompleteness and necessitates an unmeasurable substrate (\(U\)) populated by topological Folds. In this final paper, we translate these theoretical claims into falsifiable experimental protocols. We design three Quota-Critical Witnesses: (1) the Simulation Complexity Witness, which predicts increased compressibility and min-entropy degradation when a QRNG is driven beyond its action capacity; (2) Ramsey Fisher Benchmarks, which verify that Fisher information plateaus when the accumulated measurement record exceeds the ledger capacity \(N_{max}\); and (3) Ultra-Dense Fermi Gases, which constrain the fundamental non-locality scale \(l_0\) via deviations in the equation of state.
+                                [cite_start]We design three falsifiable experimental protocols to test Action Realism[cite: 752]. (1) [cite_start]The <strong>Simulation Complexity Witness</strong> predicts min-entropy degradation in QRNGs driven beyond action capacity[cite: 753]. (2) [cite_start]<strong>Ramsey Fisher Benchmarks</strong> verify that Fisher information plateaus when the accumulated measurement record exceeds the ledger capacity \(N_{app}\)[cite: 753]. (3) [cite_start]<strong>Ultra-Dense Fermi Gases</strong> constrain the fundamental non-locality scale \(l_0\) via systematic deviations in the equation of state (EOS) residuals[cite: 753]. [cite_start]A positive result in any of these would provide evidence that physical reality is resource-bounded[cite: 754].
                             </p>
                         </div>
 
@@ -1843,7 +1868,7 @@
                             <a href="pdfs/QCW.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-amber-600 transition-colors shadow-sm">
                                 <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
                             </a>
-                            <span class="text-xs text-slate-400 italic">PDF Download</span>
+                            <span class="text-xs text-slate-400 italic">Experimental Protocols</span>
                         </div>
                     </div>
 
