@@ -89,13 +89,13 @@
                     </div>
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="group relative bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
+                            <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
                             <div class="p-8 flex flex-col h-full">
                                 <h3 class="text-xl font-bold text-slate-900 mb-2">Part I</h3>
-                                <h4 class="text-lg font-medium text-indigo-700 mb-4">Semantics</h4>
+                                <h4 class="text-lg font-medium text-emerald-700 mb-4">Semantics</h4>
                                 <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">Defining the conflict between the infinite potential of the <strong>Dreamer</strong> and the finite <strong>Pilot</strong>.</p>
                                 <div class="space-y-3 pt-4 border-t border-slate-100">
-                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter1')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 1</button><button onclick="showView('chapter2')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded border border-indigo-200 transition-colors">Ch 2</button></div></div>
+                                    <div class="flex flex-col gap-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">The Book</span><div class="flex gap-2"><button onclick="showView('chapter1')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 1</button><button onclick="showView('chapter2')" class="px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold rounded border border-emerald-200 transition-colors">Ch 2</button></div></div>
                                     <div class="flex flex-col gap-2 pt-2"><span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Research & Tools</span><div class="flex gap-2"><button onclick="showView('part1-hub')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="library" class="w-3 h-3 mr-1.5"></i> Papers</button><button onclick="showView('code-registry')" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium rounded border border-slate-200 transition-colors"><i data-lucide="code" class="w-3 h-3 mr-1.5"></i> Code</button></div></div>
                                 </div>
                             </div>
@@ -141,9 +141,9 @@
                     </div>
                     <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-left space-y-4 mt-8">
                         <label class="block text-sm font-medium text-slate-300">Share your critique or insight</label>
-                        <textarea id="critique-input" class="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent h-32" placeholder="Reference a specific Part, equation, or concept..."></textarea>
+                        <textarea id="critique-input" class="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent h-32" placeholder="Reference a specific Part, equation, or concept..."></textarea>
                         <div class="flex justify-end">
-                            <button onclick="sendCritiqueEmail()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2 px-6 rounded-lg transition-colors">Send via Email</button>
+                            <button onclick="sendCritiqueEmail()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2 px-6 rounded-lg transition-colors">Send via Email</button>
                         </div>
                     </div>
                 </div>
@@ -159,13 +159,13 @@
         </div>
 
         <div id="view-part1-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part I: Research Library</span></div></div>
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part I: Research Library</span></div></div>
             <div class="max-w-5xl mx-auto px-6 mt-16">
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">Semantics: The Unmeasurable Pressure</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('part1-essays-toc')">
-                        <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
-                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Foundational Essays</h2><p class="text-slate-600 mb-6 leading-relaxed">The philosophical and ontological bedrock of Action Realism.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>2 Papers</span></div></div>
+                        <div class="h-2 bg-emerald-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">Foundational Essays</h2><p class="text-slate-600 mb-6 leading-relaxed">The philosophical and ontological bedrock of Action Realism.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>2 Papers</span></div></div>
                     </div>
                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer" onclick="showView('gql2-toc')">
                         <div class="h-2 bg-amber-500 w-full group-hover:h-3 transition-all"></div>
@@ -180,13 +180,13 @@
         </div>
 
         <div id="view-part2-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II: Research Library</span></div></div>
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part II: Research Library</span></div></div>
             <div class="max-w-5xl mx-auto px-6 mt-16">
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Action Quota Library</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('reconstruction-toc')">
-                        <div class="h-2 bg-indigo-500 w-full group-hover:h-3 transition-all"></div>
-                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-indigo-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">The Reconstruction Archive</h2><p class="text-slate-600 mb-6 leading-relaxed">The formal eight-lemma derivation of quantum mechanics from the single axiom of variance complementarity.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>9 Papers</span></div></div>
+                        <div class="h-2 bg-emerald-500 w-full group-hover:h-3 transition-all"></div>
+                        <div class="p-8"><div class="flex items-center justify-between mb-4"><span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Series I</span><i data-lucide="arrow-right" class="w-5 h-5 text-slate-300 group-hover:text-emerald-500 transition-colors"></i></div><h2 class="text-2xl font-bold text-slate-900 mb-3">The Reconstruction Archive</h2><p class="text-slate-600 mb-6 leading-relaxed">The formal eight-lemma derivation of quantum mechanics from the single axiom of variance complementarity.</p><div class="flex items-center text-sm text-slate-500 border-t border-slate-100 pt-4"><i data-lucide="file-stack" class="w-4 h-4 mr-2"></i><span>9 Papers</span></div></div>
                     </div>
                     <div class="group bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all cursor-pointer md:col-span-2" onclick="showView('fold-kinematics-toc')">
                         <div class="h-2 bg-emerald-500 w-full group-hover:h-3 transition-all"></div>
@@ -197,7 +197,7 @@
         </div>
 
         <div id="view-part3-hub" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part III: Research Library</span></div></div>
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-amber-600">Part III: Research Library</span></div></div>
             <div class="max-w-5xl mx-auto px-6 mt-16">
                 <header class="mb-16 text-center max-w-3xl mx-auto"><h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">The Will: Architecture of the Fold</h1></header>
                 <div class="grid md:grid-cols-2 gap-8">
@@ -216,7 +216,7 @@
         <div id="view-chapter1" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part I &bull; Chapter 1</span>
@@ -226,12 +226,12 @@
             <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
                 
                 <header class="mb-12 text-center">
-                    <div class="text-indigo-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div>
+                    <div class="text-emerald-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div>
                     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">The Dreamer, The Pilot, and the Inevitable Edge</h1>
                     <p class="text-slate-500 italic font-sans">Chapter 1</p>
                 </header>
 
-                <div class="bg-indigo-50 p-8 rounded-xl text-indigo-900 mb-12 italic text-base leading-relaxed border border-indigo-100 font-sans">
+                <div class="bg-emerald-50 p-8 rounded-xl text-emerald-900 mb-12 italic text-base leading-relaxed border border-emerald-100 font-sans">
                     <strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong>
                     We begin with the fundamental paradox of existence: the tension between infinite potential and finite structure. This chapter argues that physical reality is the mandatory resolution of this tension—a transaction between unmeasurable potential (<strong>Semantics</strong>) and measurable structure (<strong>Syntax</strong>). We introduce <strong>Action Realism</strong>, a monistic framework where the flow of physical action (\(S\)) is primary. We propose that the quantization of action is not an arbitrary fact of nature, but a thermodynamic necessity: the <strong>Action Quota</strong> (\(\rho_0 \approx \hbar/2\)), representing the minimum action required to maintain a distinct bit of information against quantum indeterminacy.
                 </div>
@@ -245,7 +245,7 @@
                         The natural state of the universe is not sharpness, but a blur. Entropy drives systems toward thermal equilibrium—a featureless distribution where distinctions dissolve. In the language of statistical mechanics, sharply defined structures like your hand occupy an astronomically small fraction of configuration space. Hence, existence itself is a struggle against the indeterminate.
                     </p>
                     <p class="mb-6">
-                        The constructed nature of this boundary is tragically revealed when it fails. Neurologists have documented patients like Yolanda—cases based on parietal-lobe damage—who lose track of where their bodies end. Reaching for a coffee cup, Yolanda could not tell where her hand ended and the ceramic began. <span class="text-indigo-800">"I am the cup,"</span> she reported, frightened.
+                        The constructed nature of this boundary is tragically revealed when it fails. Neurologists have documented patients like Yolanda—cases based on parietal-lobe damage—who lose track of where their bodies end. Reaching for a coffee cup, Yolanda could not tell where her hand ended and the ceramic began. <span class="text-emerald-800">"I am the cup,"</span> she reported, frightened.
                     </p>
                     <p>
                         Yolanda's struggle is a neurological parable for physical reality. We are all, every moment, rebuilding the boundary of the self against a background of disorder. But what resource sustains this boundary?
@@ -321,7 +321,7 @@
                     <p class="mb-4">
                         Semantics is the sector of <strong>unmeasurable potential</strong>. We do not use "unmeasurable" to mean "mystical," but in the strict quantum sense of <strong>Indeterminacy</strong>.
                     </p>
-                    <ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-indigo-400">
+                    <ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-emerald-400">
                         <li>Before a photon hits a screen, it exists as a <strong>wave function</strong>—an amplitude of potential states. It has no definite position. It is "semantic"—pure potential.</li>
                         <li>It is unmeasurable in principle because any measurement converts it into Syntax. You cannot see the wave; you can only see where it crashed.</li>
                     </ul>
@@ -330,7 +330,7 @@
                     <p class="mb-4">
                         Syntax is the sector of <strong>finite structure</strong>. It is the ledger of what has actually happened—the collapsed eigenstate, the recorded measurement. It is defined by:
                     </p>
-                    <ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-indigo-400">
+                    <ul class="list-disc list-outside ml-6 mb-6 space-y-2 marker:text-emerald-400">
                         <li><strong>Temporal Evolution:</strong> The history of the system, including both the unitary flow of quantum states and the irreversible accumulation of measurement records.</li>
                         <li><strong>Structural Consistency:</strong> The uniformity of physical constants (\(c, \hbar, e\)) across spacetime suggests a global constraint—what we interpret as a universal "exchange rate" for converting quantum potential into classical actuality.</li>
                     </ul>
@@ -347,7 +347,7 @@
 [Image of double slit experiment interference pattern]
 
 
-                    <div class="pl-4 border-l-4 border-indigo-200 my-6 italic text-slate-600">
+                    <div class="pl-4 border-l-4 border-emerald-200 my-6 italic text-slate-600">
                         <p class="mb-2">The standard question is: <span class="text-slate-900 not-italic">How does it choose?</span></p>
                         <p>Our question is: <span class="text-slate-900 not-italic">What does it cost?</span></p>
                     </div>
@@ -359,7 +359,7 @@
                         If the Pilot tries to know its position with absolute precision (\(\Delta x \to 0\)), the cost in momentum uncertainty explodes (\(\Delta p \to \infty\)). This is not an annoying limit of our tools; it is the bankruptcy of the Action Budget. The system cannot afford to be perfectly defined.
                     </p>
                     <p class="mb-8">
-                        Stephen Hawking asked: <span class="text-indigo-800">"What is it that breathes fire into the equations and makes a universe for them to describe?"</span>
+                        Stephen Hawking asked: <span class="text-emerald-800">"What is it that breathes fire into the equations and makes a universe for them to describe?"</span>
                     </p>
                     <p class="text-lg font-medium text-slate-900 mb-8">
                         The answer is the <strong>Action Quota</strong>. Reality exists because the Dreamer pays a tax to become the Pilot.
@@ -373,7 +373,7 @@
                 </section>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter2')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -383,7 +383,7 @@
         <div id="view-chapter2" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part I &bull; Chapter 2</span>
@@ -393,13 +393,13 @@
             <article class="max-w-3xl mx-auto px-6 mt-12 font-serif text-lg leading-relaxed text-slate-800">
                 
                 <header class="mb-12 text-center">
-                    <div class="text-indigo-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div>
+                    <div class="text-emerald-600 font-sans font-bold tracking-wide uppercase text-sm mb-3">Part I: Semantics</div>
                     <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">The Action-Information Bridge</h1>
                     <p class="text-2xl text-slate-400 italic font-serif mb-4">Verb and Noun</p>
                     <p class="text-slate-500 italic font-sans">Chapter 2</p>
                 </header>
 
-                <div class="bg-indigo-50 p-8 rounded-xl text-indigo-900 mb-12 italic text-base leading-relaxed border border-indigo-100 font-sans">
+                <div class="bg-emerald-50 p-8 rounded-xl text-emerald-900 mb-12 italic text-base leading-relaxed border border-emerald-100 font-sans">
                     <strong class="block mb-2 not-italic font-bold uppercase text-xs tracking-wider opacity-70">Abstract</strong>
                     Having established that physical reality emerges from a transaction between unmeasurable potential and finite structure, we now quantify the price of that transaction. We introduce the <strong>Bridge Postulate</strong>: the proposed equivalence between the cost of continuous evolution (per radian, \(\rho_0\)) and the cost of stable records (per cycle, \(2\pi\rho_0\)). This unification suggests that quantum mechanics is not an arbitrary set of rules, but the inevitable accounting system for a finite <strong>Action Budget</strong>. We introduce the <strong>Caustic Fold</strong>—the geometric mechanism by which continuous action creates stable particles—and use the Heisenberg Uncertainty Principle to empirically constrain the Action Quota.
                 </div>
@@ -434,8 +434,8 @@
                         To transform this from philosophy to physics, we introduce the definitive equivalence that anchors Action Realism.
                     </p>
                     
-                    <div class="my-8 p-8 border-y-2 border-indigo-100 bg-slate-50 text-center">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-4">The Bridge Postulate</h3>
+                    <div class="my-8 p-8 border-y-2 border-emerald-100 bg-slate-50 text-center">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-emerald-600 mb-4">The Bridge Postulate</h3>
                         <p class="mb-4 text-slate-700">
                             We propose that the action cost of a persistent record (a "noun") is exactly one complete phase cycle of the continuous evolution (the "verb"):
                         </p>
@@ -509,7 +509,7 @@
                     <p class="mb-4">
                         Comparing these expressions, we identify our first empirical constraint:
                     </p>
-                    <div class="math-block font-bold text-indigo-900">
+                    <div class="math-block font-bold text-emerald-900">
                         $$ \rho_0 = \frac{\hbar}{2} $$
                     </div>
                     <p class="mb-6">
@@ -551,8 +551,8 @@
                 </section>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter1')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter1')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter3')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -562,7 +562,7 @@
         <div id="view-chapter3" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 3</span>
@@ -731,8 +731,8 @@
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter2')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter2')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter4')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -742,7 +742,7 @@
         <div id="view-chapter4" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 4</span>
@@ -868,7 +868,7 @@
                     <p class="mb-6">
                         If we identify our Action Quota \(\rho_0\) with the reduced Planck constant \(\hbar\) (which we will rigorously calibrate in Chapter 5), we recover the time-dependent Schrödinger equation:
                     </p>
-                    <div class="math-block font-bold text-indigo-900 text-xl">
+                    <div class="math-block font-bold text-emerald-900 text-xl">
                         $$ i\hbar \frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle $$
                     </div>
                 </section>
@@ -922,8 +922,8 @@
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter3')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter3')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter5')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -934,7 +934,7 @@
         <div id="view-chapter5" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part II &bull; Chapter 5</span>
@@ -1064,7 +1064,7 @@
                                 $$ \frac{2\pi\rho_0\nu}{e^{2\pi\rho_0\nu/k_B T} - 1} = \frac{h\nu}{e^{h\nu/k_B T} - 1} $$
                             </div>
                             <p class="mb-2">This equality holds if and only if:</p>
-                            <div class="math-block text-xl font-bold text-indigo-900">
+                            <div class="math-block text-xl font-bold text-emerald-900">
                                 $$ 2\pi\rho_0 = h \implies \rho_0 = \frac{h}{2\pi} = \hbar $$
                             </div>
                         </div>
@@ -1130,8 +1130,8 @@
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter4')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter4')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter6')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Part &rarr;</button>
                 </footer>
 
@@ -1141,7 +1141,7 @@
         <div id="view-chapter6" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 6</span>
@@ -1230,7 +1230,7 @@
                     <p class="mb-4">
                         This implies \(k_*^4 \sim (2\pi)^3/\rho_0\). For spherical integration in 4D, this yields the fundamental relation:
                     </p>
-                    <div class="math-block font-bold text-indigo-900">
+                    <div class="math-block font-bold text-emerald-900">
                         $$ \Lambda_*^2 = 4\pi\rho_0 $$
                     </div>
                     <p class="mb-6">(In natural units where \(\hbar=1\)). This ties the abstract quantum limit directly to the field theory cutoff.</p>
@@ -1333,8 +1333,8 @@
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter5')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter5')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter7')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -1344,7 +1344,7 @@
         <div id="view-chapter7" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 7</span>
@@ -1537,8 +1537,8 @@
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter6')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
-                    <button onclick="showView('home')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
+                    <button onclick="showView('chapter6')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('home')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">Return to Overview</button>
                     <button onclick="showView('chapter8')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Next Chapter &rarr;</button>
                 </footer>
 
@@ -1548,7 +1548,7 @@
         <div id="view-chapter8" class="hidden fade-in bg-white min-h-screen pb-20">
             <div class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-6 py-3">
                 <div class="max-w-3xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
                     </button>
                     <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Part III &bull; Chapter 8</span>
@@ -1604,28 +1604,28 @@
                     <p class="mb-6">The physical constraints derived in this book translate directly into ethical imperatives.</p>
                     
                     <div class="space-y-6">
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <h4 class="font-bold text-indigo-900 text-sm uppercase mb-1">1. Integration (Chapter 3)</h4>
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-emerald-900 text-sm uppercase mb-1">1. Integration (Chapter 3)</h4>
                             <p class="text-sm text-slate-600 mb-1">The Bloch Sphere integrates quantum potential into a unified state—superpositions collapse to definite outcomes.</p>
                             <p class="text-base font-medium text-slate-800"><em>Ethical Imperative:</em> Seek coherent synthesis over fragmentation.</p>
                         </div>
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <h4 class="font-bold text-indigo-900 text-sm uppercase mb-1">2. Differentiation (Chapter 2)</h4>
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-emerald-900 text-sm uppercase mb-1">2. Differentiation (Chapter 2)</h4>
                             <p class="text-sm text-slate-600 mb-1">Distinctions cost action (\(\rho_0\))—every "this vs. that" draws from the finite budget.</p>
                             <p class="text-base font-medium text-slate-800"><em>Ethical Imperative:</em> Value what makes things distinct. Do not spend the budget on noise.</p>
                         </div>
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <h4 class="font-bold text-indigo-900 text-sm uppercase mb-1">3. Recursion (Chapter 7)</h4>
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-emerald-900 text-sm uppercase mb-1">3. Recursion (Chapter 7)</h4>
                             <p class="text-sm text-slate-600 mb-1">The DST feedback loop (\(M \leftrightarrow C\)) shows memory shapes the future—systems write their own history into structure.</p>
                             <p class="text-base font-medium text-slate-800"><em>Ethical Imperative:</em> Take responsibility for the patterns we perpetuate.</p>
                         </div>
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <h4 class="font-bold text-indigo-900 text-sm uppercase mb-1">4. Boundary (Chapter 7)</h4>
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-emerald-900 text-sm uppercase mb-1">4. Boundary (Chapter 7)</h4>
                             <p class="text-sm text-slate-600 mb-1">The Fold of Life requires continuous energy expenditure—maintaining "self" vs. "other" is work.</p>
                             <p class="text-base font-medium text-slate-800"><em>Ethical Imperative:</em> Respect the metabolic cost of identity.</p>
                         </div>
-                        <div class="border-l-4 border-indigo-500 pl-4">
-                            <h4 class="font-bold text-indigo-900 text-sm uppercase mb-1">5. Coherence (Chapter 6)</h4>
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-emerald-900 text-sm uppercase mb-1">5. Coherence (Chapter 6)</h4>
                             <p class="text-sm text-slate-600 mb-1">The DFT kernel preserves structure against UV divergence by filtering high-frequency noise.</p>
                             <p class="text-base font-medium text-slate-800"><em>Ethical Imperative:</em> Build narratives that maximize future action space rather than foreclosing it.</p>
                         </div>
@@ -1664,7 +1664,7 @@
                     </p>
                     <div class="grid grid-cols-2 gap-4 mb-6 text-center">
                         <div class="bg-slate-50 p-4 rounded border border-slate-200">
-                            <strong class="block text-indigo-600 mb-2">Too much Dreamer</strong>
+                            <strong class="block text-emerald-600 mb-2">Too much Dreamer</strong>
                             <span class="text-sm">Chaos (no stable facts)</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded border border-slate-200">
@@ -1677,24 +1677,24 @@
                     </p>
                 </section>
 
-                <div class="bg-indigo-50 p-8 rounded-xl border border-indigo-200 text-center">
-                    <h2 class="text-2xl font-bold text-indigo-900 mb-4 font-serif italic">Epilogue: The Unfolding Story</h2>
-                    <p class="mb-6 text-indigo-800 leading-relaxed text-left">
+                <div class="bg-emerald-50 p-8 rounded-xl border border-emerald-200 text-center">
+                    <h2 class="text-2xl font-bold text-emerald-900 mb-4 font-serif italic">Epilogue: The Unfolding Story</h2>
+                    <p class="mb-6 text-emerald-800 leading-relaxed text-left">
                         We began with a hand held to light, feeling the edge between self and world. We traced this edge to its source: the Action Quota \(\rho_0\), the fundamental price of distinction.
                     </p>
-                    <p class="mb-6 text-indigo-800 leading-relaxed text-left">
+                    <p class="mb-6 text-emerald-800 leading-relaxed text-left">
                         This book has shown that the deepest laws of physics—quantum mechanics, field theory, the emergence of life—follow from a single constraint: reality operates on a finite action budget. But this is not a closed conclusion. It is an invitation.
                     </p>
-                    <p class="mb-6 text-indigo-800 leading-relaxed text-left">
+                    <p class="mb-6 text-emerald-800 leading-relaxed text-left">
                         Every measurement you make, every memory you form, every choice you enact—these are not passive observations but active expenditures of action. You are not watching the universe unfold; you are participating in its unfolding. The Dreamer dreams. The Pilot measures. And you—conscious, willful, thermodynamically improbable—stand at their intersection.
                     </p>
-                    <p class="text-indigo-900 font-medium italic">
+                    <p class="text-emerald-900 font-medium italic">
                         The story continues, and every choice spends action against the blur.
                     </p>
                 </div>
 
                 <footer class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 font-sans text-sm">
-                    <button onclick="showView('chapter7')" class="inline-block bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
+                    <button onclick="showView('chapter7')" class="inline-block bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-medium py-2 px-6 rounded-full transition-colors mr-4">&larr; Previous Chapter</button>
                     <button onclick="showView('home')" class="inline-block bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-6 rounded-full transition-colors">Return to Overview</button>
                 </footer>
 
@@ -1705,20 +1705,20 @@
             
             <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
                 <div class="max-w-5xl mx-auto flex justify-between items-center">
-                    <button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors">
+                    <button onclick="showView('part1-hub')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
                     </button>
-                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-indigo-600">Part I | Series I: Essays</span>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-emerald-600">Part I | Series I: Essays</span>
                 </div>
             </div>
 
             <div class="max-w-4xl mx-auto px-6 mt-12">
                 <div class="grid gap-8">
 
-                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-indigo-500 p-6 md:p-8">
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Essay 1.1</span>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Essay 1.1</span>
                                 <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Against the Blur</h2>
                                 <p class="text-slate-500 text-sm font-medium">Life in a Finite-Resolution Universe</p>
                             </div>
@@ -1733,17 +1733,17 @@
                         </div>
 
                         <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
-                            <a href="pdfs/ATB.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-indigo-600 transition-colors shadow-sm">
+                            <a href="pdfs/ATB.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
                                 <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
                             </a>
                             <span class="text-xs text-slate-400 italic">PDF Download</span>
                         </div>
                     </div>
 
-                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-indigo-500 p-6 md:p-8">
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-emerald-500 p-6 md:p-8">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-2 py-1 rounded">Essay 1.2</span>
+                                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Essay 1.2</span>
                                 <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Being, Becoming, and the Architecture of Experience</h2>
                             </div>
                             <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
@@ -1761,7 +1761,7 @@
                         </div>
 
                         <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
-                            <a href="pdfs/BB.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-indigo-600 transition-colors shadow-sm">
+                            <a href="pdfs/BB.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-emerald-600 transition-colors shadow-sm">
                                 <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
                             </a>
                             <span class="text-xs text-slate-400 italic">PDF Download</span>
@@ -2290,7 +2290,7 @@
         </div>
 
         <div id="view-code-registry" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-indigo-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Overview</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-slate-500">Computational Registry</span></div></div>
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('home')" class="text-sm font-medium text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Overview</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-slate-500">Computational Registry</span></div></div>
             <div class="max-w-4xl mx-auto px-6 mt-12"><div class="space-y-8"></div></div>
         </div>
 
