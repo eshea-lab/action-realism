@@ -132,15 +132,29 @@
                 <div class="max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-4xl font-bold">From Solitude to Collaboration</h2>
                     <div class="text-slate-300 text-lg leading-relaxed space-y-4">
-                        <p>This work is a product of independent study. Without traditional academic resources, I have used AI to stress-test these ideas, but a simulation is no substitute for community.</p>
-                        <p>I am publishing these drafts to invite real scrutiny. Please help me refine this work: identify my biases, correct my math, and tell me where I am wrong. My goal is to turn this solitary project into an open, evolving collaboration.</p>
+                        <p>
+                            Developing this framework has been a solitary endeavor, and I approach it with the humility of a student. In the absence of a department, I have relied on AI tools to simulate the critical review and revision cycles I lacked.
+                        </p>
+                        <p>
+                            I am acutely aware of the blind spots this method can introduce. To counter them, I am opening this work to the public record. I invite you to challenge my premises, check my calculations, and highlight my errors. I view this not as a finished product, but as a living, collaborative effort.
+                        </p>
                     </div>
                     <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-left space-y-4 mt-8">
                         <label class="block text-sm font-medium text-slate-300">Share your critique or insight</label>
-                        <textarea class="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent h-32" placeholder="Reference a specific Part, equation, or concept..."></textarea>
-                        <div class="flex justify-end"><button onclick="alert('In a real version, this would submit your contribution to the public discussion board.')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2 px-6 rounded-lg transition-colors">Submit Contribution</button></div>
+                        <textarea id="critique-input" class="w-full bg-slate-900 border border-slate-600 rounded-lg p-4 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent h-32" placeholder="Reference a specific Part, equation, or concept..."></textarea>
+                        <div class="flex justify-end">
+                            <button onclick="sendCritiqueEmail()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2 px-6 rounded-lg transition-colors">Send via Email</button>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    function sendCritiqueEmail() {
+                        const userText = document.getElementById('critique-input').value;
+                        const myEmail = "m.emiliano.shea@gmail.com"; 
+                        const subject = "Critique: Action Realism Project";
+                        window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(userText)}`;
+                    }
+                </script>
             </section>
         </div>
 
