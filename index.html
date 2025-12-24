@@ -2273,11 +2273,171 @@
         </div>
 
         <div id="view-dft-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
-            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm"><div class="max-w-5xl mx-auto flex justify-between items-center"><button onclick="showView('part3-hub')" class="text-sm font-medium text-slate-500 hover:text-blue-600 flex items-center gap-2 transition-colors"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library</button><span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-blue-600">Part III | Series I: Dynamic Field Theory</span></div></div>
-            <div class="max-w-4xl mx-auto px-6 mt-12"><div class="grid gap-8">
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Dynamic Field Theory: From Master Action...</h2><div class="pt-4"><button onclick="alert('Downloading DFTfromMAtoEF.pdf...')" class="text-blue-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8"><h2 class="text-xl font-bold text-slate-900">Dynamic Field Theory: a Single-Scale Entire-Kernel...</h2><div class="pt-4"><button onclick="alert('Downloading NDFT.pdf...')" class="text-blue-600 font-medium text-sm flex items-center"><i data-lucide="download" class="w-4 h-4 mr-2"></i> PDF</button></div></div>
-            </div></div>
+            
+            <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-6 py-4 shadow-sm">
+                <div class="max-w-5xl mx-auto flex justify-between items-center">
+                    <button onclick="showView('part3-hub')" class="text-sm font-medium text-slate-500 hover:text-blue-600 flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Library
+                    </button>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest text-blue-600">Research Series | Action Field Theory</span>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12">
+                <div class="grid gap-8">
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-slate-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-slate-600 uppercase tracking-wider bg-slate-100 px-2 py-1 rounded">Prospectus</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Action Field Theory</h2>
+                                <p class="text-slate-500 text-sm font-medium">A Finite-Capacity Framework for Quantum Fields</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Standard Quantum Field Theory (QFT) assumes arbitrarily high-energy modes are accessible, leading to ultraviolet divergences and the hierarchy problem. This series proposes Action Field Theory (AFT), a framework where the vacuum is a physical medium constrained by a finite capacity to sustain change, the Action Quota \((\rho_{0})\). We demonstrate that this constraint manifests physically as a non-local "Metabolic Cost Function" represented mathematically by an entire, ghost-free kernel \(K(\Box)\) which suppresses action expenditure beyond a fundamental scale.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/PrefaceCC.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-700 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Series Overview</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-blue-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Paper I</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Action Substrate</h2>
+                                <p class="text-slate-500 text-sm font-medium">Entire-Kernel Kinematics for a Bounded Field</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We introduce the foundational kinematics of Action Field Theory (AFT). We postulate that the vacuum is a physical medium constrained by a finite Action Quota \((\rho_{0})\), which manifests as a metabolic cost for high-frequency fluctuations. Mathematically, this is realized by modifying the quadratic kinetic operator with an entire, zero-free kernel \(K(\Box)=e^{-\Box/\Lambda^{2}}\). We derive the equation of motion and the dressed propagator, showing that the kernel softens point-source singular behavior in the static potential into a finite error-function core.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/ActionSubstrate.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Kinematics</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-blue-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Paper II</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Consistency of the Limit</h2>
+                                <p class="text-slate-500 text-sm font-medium">Unitarity and Causality in a Quota-Bounded Vacuum</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Non-local field theories face two fundamental challenges: ghost states that violate unitarity, and breakdowns of causality. We prove that Action Field Theory (AFT) avoids both pathologies. First, we show the entire, zero-free nature of the exponential kernel \(K(\Box)=e^{-\Box/\Lambda^{2}}\) guarantees a ghost-free spectrum. Second, using Dressed Cutkosky Rules, we verify unitarity: the imaginary part of forward scattering amplitudes remains positive definite. Third, we invoke the Paley-Wiener theorem to prove that acausal effects are exponentially suppressed at macroscopic scales.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/ConsistencyLimit.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Consistency Proofs</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-blue-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Paper III</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">Gravity as Metabolic Load</h2>
+                                <p class="text-slate-500 text-sm font-medium">General Relativity from the Saturation of Action</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                We propose that gravity is not merely curvature but the metabolic response of the Action Substrate to the presence of mass. We construct the dressed Einstein-Hilbert action by applying the metabolic kernel \(K(\Box)=e^{-\Box/\Lambda^{2}}\) to the linearized gravitational field. Using the Barnes-Rivers projector formalism, we derive the modified graviton propagator and demonstrate that General Relativity is recovered as the low-energy limit of this thermodynamic constraint. We further show that the non-local dressing preserves causality under gravitational load.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/GMetabolicL.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Gravity & GR</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-blue-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Paper IV</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Saturated Ledger</h2>
+                                <p class="text-slate-500 text-sm font-medium">Horizons, Cosmology, and the Limits of the Field</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Standard General Relativity treats event horizons as geometric surfaces of no return. Action Field Theory (AFT) reinterprets them as thermodynamic phase boundaries. In this paper, we explore the "Edges of Spacetime" where the local Action Density approaches the fundamental Quota. We propose that near black holes there exist saturation surfaces—regions where the metabolic cost of maintaining curvature strongly suppresses dynamical response. We also derive a finite value for the vacuum energy density: \(\rho_{vac}\sim\Lambda^{4}\), linking the cosmological constant to the metabolic scale.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/SaturatedL.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Cosmology</span>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all border-l-4 border-l-blue-500 p-6 md:p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Paper V</span>
+                                <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-2">The Signatures of Distinction</h2>
+                                <p class="text-slate-500 text-sm font-medium">Phenomenological Roadmap for Testing the Action Limit</p>
+                            </div>
+                            <span class="text-xs text-slate-400 font-mono border border-slate-100 px-2 py-1 rounded">v1.0</span>
+                        </div>
+                        
+                        <div class="bg-slate-50 rounded-lg p-5 border border-slate-100 mb-6">
+                            <strong class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Abstract</strong>
+                            <p class="text-slate-600 font-serif text-sm leading-relaxed text-justify">
+                                Action Field Theory (AFT) posits a finite action capacity for the vacuum, characterized by a metabolic scale \(\Lambda\). This final paper translates this principle into a falsifiable phenomenological program. We derive scaling laws for expected deviations in gravitational wave damping, lattice QCD glueball mass shifts, quantum decoherence (Bell parameter drift), and Higgs self-coupling. We identify the 1-100 TeV range as phenomenologically viable and testable with current and near-future experiments.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-2 border-t border-slate-100">
+                            <a href="pdfs/SDistinction.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm">
+                                <i data-lucide="download" class="w-4 h-4 mr-2"></i> Download PDF
+                            </a>
+                            <span class="text-xs text-slate-400 italic">Phenomenology</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div id="view-dst-toc" class="hidden fade-in bg-slate-50 min-h-screen pb-20">
