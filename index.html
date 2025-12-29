@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Action Realism: A physical framework for semantics, syntax, and agency.">
     <title>Action Realism: What is the price of being distinct?</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,9 +19,8 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Merriweather', serif; }
-        .btn-transition { transition: all 0.3s ease; }
         .bg-paper { background-color: #fdfbf7; }
-        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
         /* Custom Math Styling */
@@ -28,31 +28,25 @@
         .math-block { 
             font-family: 'Times New Roman', Times, serif; 
             text-align: center; 
-            padding: 1rem; 
+            padding: 1.25rem; 
             background: #f8fafc; 
             border-radius: 0.5rem; 
-            margin: 1.5rem 0; 
-            font-size: 1.1em; 
+            margin: 2rem 0; 
+            font-size: 1.15em; 
             color: #1e293b; 
             border: 1px solid #e2e8f0; 
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
         }
     </style>
 </head>
 <body class="bg-paper text-slate-800 flex flex-col min-h-screen">
 
     <nav class="w-full bg-white/90 backdrop-blur-md shadow-sm px-6 py-4 sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center cursor-pointer" onclick="showView('home')">
-                <img src="pdfs/ARlogo.png" alt="Action Realism Logo" class="h-8 w-auto mr-3">
+        <div class="max-w-6xl mx-auto flex justify-center md:justify-start items-center">
+            <div class="flex items-center cursor-pointer select-none" onclick="showView('home')">
+                <img src="pdfs/ARlogo.png" alt="Action Realism Logo" class="h-8 w-auto mr-3 opacity-90">
                 <div class="font-bold text-xl text-slate-900 tracking-tight">Action Realism</div>
             </div>
-            
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-                <a href="#" onclick="showView('home'); document.getElementById('origin').scrollIntoView();" class="hover:text-emerald-600 transition-colors">The Origin</a>
-                <a href="#" onclick="showView('home'); document.getElementById('structure').scrollIntoView();" class="hover:text-emerald-600 transition-colors">Structure</a>
-                <a href="#" onclick="showView('home'); document.getElementById('collaborate').scrollIntoView();" class="hover:text-emerald-600 transition-colors">Collaborate</a>
-            </div>
-            <button class="md:hidden text-slate-500 hover:text-emerald-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </nav>
 
@@ -60,24 +54,40 @@
         
         <div id="view-home" class="fade-in">
             <section class="py-24 px-6 text-center border-b border-slate-200 bg-white">
-                <div class="max-w-4xl mx-auto space-y-6">
+                <div class="max-w-4xl mx-auto space-y-8">
                     
-                    <video autoplay loop muted playsinline poster="pdfs/ARlogo.png" class="h-32 w-auto mx-auto mb-8 mix-blend-multiply">
-                        <source src="pdfs/ARlogo.mp4" type="video/mp4">
-                        <img src="pdfs/ARlogo.png" alt="Action Realism Logo" class="h-32 w-auto mx-auto">
-                    </video>
+                    <div class="relative h-32 w-32 mx-auto mb-8">
+                        <video autoplay loop muted playsinline poster="pdfs/ARlogo.png" class="h-full w-full object-contain mix-blend-multiply opacity-90">
+                            <source src="pdfs/ARlogo.mp4" type="video/mp4">
+                            <img src="pdfs/ARlogo.png" alt="Action Realism Logo" class="h-full w-full object-contain">
+                        </video>
+                    </div>
                     
-                    <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-2">Action <span class="text-emerald-700">Realism</span></h1>
-                    <p class="text-xl md:text-2xl text-slate-600 font-light tracking-wide uppercase">Semantics, Syntax, and Will</p>
+                    <div class="space-y-4">
+                        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-slate-900">
+                            Action <span class="text-emerald-700">Realism</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-500 font-medium tracking-widest uppercase">
+                            Semantics, Syntax, and Will
+                        </p>
+                    </div>
                     
-                    <div class="max-w-2xl mx-auto py-4">
-                        <p class="text-2xl md:text-3xl text-slate-700 font-light italic font-serif">"What is the price of being distinct?"</p>
+                    <div class="max-w-2xl mx-auto py-6">
+                        <p class="text-2xl md:text-4xl text-slate-800 font-light italic font-serif leading-tight">
+                            "What is the price of being distinct?"
+                        </p>
                     </div>
 
-                    <p class="text-lg font-medium text-slate-800 pt-2 tracking-wide uppercase text-xs">By Emiliano Shea</p>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-6">Reality is not a given; it's an existential transaction. <br>We are not passive observers, but active participants paying a thermodynamic price to carve meaning out of the noise.</p>
+                    <div class="space-y-6">
+                        <p class="text-xs font-bold text-slate-400 tracking-widest uppercase border-t border-slate-100 inline-block pt-4 px-4">
+                            By Emiliano Shea
+                        </p>
+                        <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                            Reality is not a given; it's an existential transaction. <br>
+                            We are not passive observers, but active participants paying a thermodynamic price to carve meaning out of the noise.
+                        </p>
+                    </div>
                     
-                    <div class="pt-8"><a href="#origin" class="btn-transition inline-block bg-slate-900 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Read the Preface</a></div>
                 </div>
             </section>
 
