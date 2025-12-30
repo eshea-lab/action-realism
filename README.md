@@ -1,7 +1,7 @@
 # Action Realism
 ### Syntax, Semantics, and Will
 
-This repository hosts the development, source code, and research papers for the **Action Realism** framework—a physical and philosophical theory reconstructing quantum mechanics and agency from the principle of a finite action budget.
+This repository hosts the development, source code, and research papers for the **Action Realism** framework: a physical and philosophical theory reconstructing quantum mechanics and agency from the principle of a finite action budget.
 
 **Author:** Emiliano Shea
 
