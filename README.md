@@ -19,7 +19,7 @@ The underlying source code for the website (HTML, CSS, JavaScript logic) is lice
 * See the `LICENSE` file for details.
 
 ### 2. Research Content (CC BY-ND 4.0)
-The intellectual content—including all PDF research papers, philosophical texts, diagrams, and theoretical derivations regarding "Action Realism"—is licensed under the **Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)**.
+The intellectual content, including all PDF research papers, philosophical texts, diagrams, and theoretical derivations regarding "Action Realism", is licensed under the **Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)**.
 
 * **You are free to:** Share, copy, and redistribute the material in any medium or format.
 * **Under the following terms:**
